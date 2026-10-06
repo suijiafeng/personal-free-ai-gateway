@@ -1,0 +1,2 @@
+# Default: no real provider. Replace only as part of reviewed activation.
+deny-all.invalid

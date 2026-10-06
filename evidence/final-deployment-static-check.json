@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "mode": "read_only_static",
+  "passed": true,
+  "activation_ready": false,
+  "enabled_providers": [],
+  "checks": [
+    {
+      "name": "backend_internal",
+      "passed": true
+    },
+    {
+      "name": "gateway_internal_only",
+      "passed": true
+    },
+    {
+      "name": "postgres_internal_only",
+      "passed": true
+    },
+    {
+      "name": "overlay_does_not_connect_gateway_to_edge",
+      "passed": true
+    },
+    {
+      "name": "provider_bridge_root_before_drop_only",
+      "passed": true
+    },
+    {
+      "name": "provider_healthcheck_drops_first",
+      "passed": true
+    },
+    {
+      "name": "egress_only_bridge",
+      "passed": true
+    },
+    {
+      "name": "egress_no_secrets",
+      "passed": true
+    },
+    {
+      "name": "groq_file_only_secret",
+      "passed": true
+    },
+    {
+      "name": "gemini_file_only_secret",
+      "passed": true
+    },
+    {
+      "name": "squid_exact_domain_no_reverse_dns",
+      "passed": true
+    },
+    {
+      "name": "squid_fail_closed_rule_order",
+      "passed": true
+    },
+    {
+      "name": "nginx_no_duplicate_request_log",
+      "passed": true
+    },
+    {
+      "name": "squid_port443_only",
+      "passed": true
+    },
+    {
+      "name": "no_tls_interception",
+      "passed": true
+    },
+    {
+      "name": "policy_hosts_consistent",
+      "passed": true
+    }
+  ],
+  "policy_sha256": "3844eb9e59281ea9dbbe46b796fa17534bc0f6c213b13ed33e13d13329a888bb",
+  "target_runtime_verified": false,
+  "remaining_gates": [
+    "Mac Docker build/network verification",
+    "account and free-only review",
+    "secret file preparation by owner",
+    "final image/SBOM/advisory review"
+  ]
+}

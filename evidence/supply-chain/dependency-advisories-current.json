@@ -1,0 +1,1265 @@
+{
+  "checked_at": "2026-10-06T09:37:36.881016+00:00",
+  "source": "PyPI exact-version JSON vulnerability metadata; public read-only, no package execution",
+  "requirements_lock_sha256": "81227b7d00150b0ad6da05439174ee3e1392cfee3373247dce3336ce8a0a442f",
+  "count": 124,
+  "packages": [
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "url": "https://pypi.org/pypi/aiohappyeyeballs/2.7.1/json",
+      "response_sha256": "90a6fe95d5083b27fa3cb21b46a78cdf84befd72a03001ea3182747e6794b983",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "PSF-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.4",
+      "url": "https://pypi.org/pypi/aiohttp/3.14.4/json",
+      "response_sha256": "2a9e3ce7a4a1c11f598da009258694c012b289ad4e9526edd5f23ea00091feec",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0 AND MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "url": "https://pypi.org/pypi/aiosignal/1.4.0/json",
+      "response_sha256": "443bdf542505c93e62117e868b9984b0c5784d50ab5b40ad0ae36d600b2d75ae",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache 2.0",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "url": "https://pypi.org/pypi/annotated-doc/0.0.5/json",
+      "response_sha256": "1aab691a5f37dd292e6d93ab53f7da5d839f56ba605345f017022ec75eb643af",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "url": "https://pypi.org/pypi/annotated-types/0.8.0/json",
+      "response_sha256": "a6e8e5b10c8fd2f596bba53e015cd37f6279fb5cec26ce0c5e9968625be4fefa",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "url": "https://pypi.org/pypi/anyio/4.15.1/json",
+      "response_sha256": "e2ee22fad2fab3e66be503cba9b41945607d3076c9b7aa49b6e2f95ac323efab",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "apscheduler",
+      "version": "3.11.3",
+      "url": "https://pypi.org/pypi/apscheduler/3.11.3/json",
+      "response_sha256": "1a67bf2a8bead9a661af5ea010505a032096f5de186b0cf8290aade604914026",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "url": "https://pypi.org/pypi/attrs/26.1.0/json",
+      "response_sha256": "a882bf941fb4a0bb748d0194df544121cc130f5fb15a710ab6b804c17d2899b7",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "azure-core",
+      "version": "1.41.0",
+      "url": "https://pypi.org/pypi/azure-core/1.41.0/json",
+      "response_sha256": "677e897fe754d9e8b13986d64a55115b9a70503e614ea4a92c4aaacc7081b33e",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "azure-identity",
+      "version": "1.26.0",
+      "url": "https://pypi.org/pypi/azure-identity/1.26.0/json",
+      "response_sha256": "0622c9305278edb54ac3e74821c77e96140f1666e312ca285eea40fd4b6d4656",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "azure-storage-blob",
+      "version": "12.31.0",
+      "url": "https://pypi.org/pypi/azure-storage-blob/12.31.0/json",
+      "response_sha256": "341dff7256fb51d1846713b093dda21ad442ea295c2a004eb4a3d5995b14209d",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT License",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "backoff",
+      "version": "2.2.1",
+      "url": "https://pypi.org/pypi/backoff/2.2.1/json",
+      "response_sha256": "2d7a7c88c04bc320385c05bbec6b7f99b7e91a7ef690a7bdee2e61fd2ba06489",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.7,<4.0"
+    },
+    {
+      "name": "boto3",
+      "version": "1.43.108",
+      "url": "https://pypi.org/pypi/boto3/1.43.108/json",
+      "response_sha256": "bf272aad06d473932b03c4a333a09f94fe0431a30cad77fca174a1fa02585464",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "botocore",
+      "version": "1.43.108",
+      "url": "https://pypi.org/pypi/botocore/1.43.108/json",
+      "response_sha256": "823273fb422ac6a927e3927e219287618e881969562157cfafba190ae04a2481",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "response_sha256": "c6fe912677e373608eab51e324946005998faeb0fa999e6ddada24676e3556d3",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MPL-2.0",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1",
+      "url": "https://pypi.org/pypi/cffi/2.1.1/json",
+      "response_sha256": "2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66",
+      "vulnerabilities": [],
+      "license_expression": "MIT-0",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "url": "https://pypi.org/pypi/charset-normalizer/3.5.2/json",
+      "response_sha256": "9fda300857ae6a0486b4cd2d2fec7817ed2d45657249a6dfc0c2bbd1a44267b6",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "url": "https://pypi.org/pypi/click/8.5.0/json",
+      "response_sha256": "4e36adc9b46f837e10ce801b7a478f9146fefdfb287292b7668fc64b1474e41d",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "croniter",
+      "version": "6.2.4",
+      "url": "https://pypi.org/pypi/croniter/6.2.4/json",
+      "response_sha256": "bc0843990d281442ba503e3a80f434d46ae234eea2a5b80c24114e13c52b6f3f",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "cryptography",
+      "version": "50.0.2",
+      "url": "https://pypi.org/pypi/cryptography/50.0.2/json",
+      "response_sha256": "7423990cc0948676ef47a71ea62a476ece4c76245e6bebd1c3a71f03c4ffc0f4",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0 OR BSD-3-Clause",
+      "license": null,
+      "requires_python": "!=3.9.0,!=3.9.1,>=3.9"
+    },
+    {
+      "name": "distro",
+      "version": "1.9.0",
+      "url": "https://pypi.org/pypi/distro/1.9.0/json",
+      "response_sha256": "d83d91adebd208c0ce5b969017d4ce5c4ec59ea7d46793c20d36b261325fc236",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache License, Version 2.0",
+      "requires_python": ">=3.6"
+    },
+    {
+      "name": "dnspython",
+      "version": "2.8.0",
+      "url": "https://pypi.org/pypi/dnspython/2.8.0/json",
+      "response_sha256": "716fe57e8485de9fe631b8bb86e2afa7a1a2e4f668488f04bb1d5f9f76341bc2",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "ISC",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "email-validator",
+      "version": "2.3.0",
+      "url": "https://pypi.org/pypi/email-validator/2.3.0/json",
+      "response_sha256": "a25f269d66f8744bc455a860896d6930ef8a8e1ce65372b772015c5ab711fa37",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Unlicense",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "expression",
+      "version": "5.7.0",
+      "url": "https://pypi.org/pypi/expression/5.7.0/json",
+      "response_sha256": "6735ba369f310351b3bb1ba583479a380bd896145102c4e41497d96ccf8d6c7c",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": "<4,>=3.10"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.142.2",
+      "url": "https://pypi.org/pypi/fastapi/0.142.2/json",
+      "response_sha256": "ba6542db3695ead313db576cf4bc86206d893225751aaa4a6feeb3e6df78db9a",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "fastapi-sso",
+      "version": "0.23.0",
+      "url": "https://pypi.org/pypi/fastapi-sso/0.23.0/json",
+      "response_sha256": "78bd43bfd6c2e6d513186ad9a8226e57f2625ab2f5701ea896e51a0bb9b32a30",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": "<4.0,>=3.10"
+    },
+    {
+      "name": "fastuuid",
+      "version": "0.14.0",
+      "url": "https://pypi.org/pypi/fastuuid/0.14.0/json",
+      "response_sha256": "6d0fc0cb24c54f9da1e75225686d391d122dc1a54735699891603c5f92699e3c",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "filelock",
+      "version": "3.32.7",
+      "url": "https://pypi.org/pypi/filelock/3.32.7/json",
+      "response_sha256": "f2921044e911f00f7a161a8de7f4e229f1a8f652ec3245ceaaf90cda3ecadb29",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "url": "https://pypi.org/pypi/frozenlist/1.8.0/json",
+      "response_sha256": "b12a7f8b816bfb2a70f2eb97140890efb08a234ab3b75841b0e89e197effa5ad",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "url": "https://pypi.org/pypi/fsspec/2026.9.0/json",
+      "response_sha256": "4a93a853911936a59262f3ccc1a36a42cfbff106beec53d6e247d00f7a3aa1e9",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "granian",
+      "version": "2.8.4",
+      "url": "https://pypi.org/pypi/granian/2.8.4/json",
+      "response_sha256": "d7e91f5ea0cfa8e45a496ed694f38ec809595a9889869f840605a94c25e3d710",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "gunicorn",
+      "version": "23.0.0",
+      "url": "https://pypi.org/pypi/gunicorn/23.0.0/json",
+      "response_sha256": "a2516550fe140479486356dbcc7f160a328fd391a778c52385fe55816897d317",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "url": "https://pypi.org/pypi/h11/0.16.0/json",
+      "response_sha256": "97f4efb9cc00826f0408076983adc1a1e48e8f2cabf403aaf250f724e081440d",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "h2",
+      "version": "4.4.1",
+      "url": "https://pypi.org/pypi/h2/4.4.1/json",
+      "response_sha256": "8903fbfc73b625064e48cc99a2c629bd47e4dd47593fa3530de83aeb55f89105",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "hf-xet",
+      "version": "1.6.0",
+      "url": "https://pypi.org/pypi/hf-xet/1.6.0/json",
+      "response_sha256": "55d0fac8208250c04f7288aa5aa189b34367583065212eec7763cd372a453d4f",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "hiredis",
+      "version": "3.4.2",
+      "url": "https://pypi.org/pypi/hiredis/3.4.2/json",
+      "response_sha256": "43811eb32b79f3504a0e5a4ebcdd016e5fa78f9d666a7b6a49cd680dafe17d79",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "hpack",
+      "version": "4.2.0",
+      "url": "https://pypi.org/pypi/hpack/4.2.0/json",
+      "response_sha256": "30c2f7e29c9c0cad70eac912fa745252f62c4a7bab1fd5e1a79f5202666b6456",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "url": "https://pypi.org/pypi/httpcore/1.0.9/json",
+      "response_sha256": "e26eca5c3d288fe9e6446af9bcbca1038ba688629d5c8a2886c47d74718d87a2",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "url": "https://pypi.org/pypi/httpcore2/2.13.1/json",
+      "response_sha256": "6e69b14b7d47dfb1b233bb4e9a98edbb929a19bf80296603fe764368f46f16e7",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "url": "https://pypi.org/pypi/httpx/0.28.1/json",
+      "response_sha256": "293bfab7bf587fcd0825f1bd8eed8e6303285ba14801b15659853827cbe30796",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "httpx2",
+      "version": "2.13.1",
+      "url": "https://pypi.org/pypi/httpx2/2.13.1/json",
+      "response_sha256": "7b19fc8178f1273cecacc95d981d124ddca8739977e9140560d138ddc5ccdb5d",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "1.33.0",
+      "url": "https://pypi.org/pypi/huggingface-hub/1.33.0/json",
+      "response_sha256": "9a43d64b72d6d56eefded8f9a000f2c3249691a5d04586571f9b48f06fed5d20",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10.0"
+    },
+    {
+      "name": "hyperframe",
+      "version": "6.1.0",
+      "url": "https://pypi.org/pypi/hyperframe/6.1.0/json",
+      "response_sha256": "161f3cc4aa873bb55267755306b46993c7f16ed1f1c3dca10c6059f6cd8f1af0",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "The MIT License (MIT)  Copyright (c) 2014 Cory Benfield  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. ",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "url": "https://pypi.org/pypi/idna/3.20/json",
+      "response_sha256": "e7cbd26e23ce60f6cb3a151d2adf3b1b087bb8f10ac2d9d6db70fdccbf3bb041",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "importlib-metadata",
+      "version": "8.9.0",
+      "url": "https://pypi.org/pypi/importlib-metadata/8.9.0/json",
+      "response_sha256": "a0073a20364cebaba62d7bfaf17ff4cd102be97638d8ca392b8eb3539db5b119",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "url": "https://pypi.org/pypi/iniconfig/2.3.0/json",
+      "response_sha256": "38c06d73779f13d8e4b48d48b3c524ff23e59d7be4bdb44cb6d90b3c5eb20182",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "inquirerpy",
+      "version": "0.3.4",
+      "url": "https://pypi.org/pypi/inquirerpy/0.3.4/json",
+      "response_sha256": "9147844f92f4803a960d29a82a26a792f345d0de986347def02016c8e1802a2e",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.7,<4.0"
+    },
+    {
+      "name": "isodate",
+      "version": "0.7.2",
+      "url": "https://pypi.org/pypi/isodate/0.7.2/json",
+      "response_sha256": "fd12a88dad35ade2d98bfa2ee0f35a7f3306a915e394fee44329bc4fc88116b3",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Copyright (c) 2021, Hugo van Kemenade and contributors Copyright (c) 2009-2018, Gerhard Weis and contributors Copyright (c) 2009, Gerhard Weis All rights reserved.  Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. * Neither the name of the <organization> nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. ",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6",
+      "url": "https://pypi.org/pypi/jinja2/3.1.6/json",
+      "response_sha256": "1bc757d7065f3e67d3a49e72ebc731d0774055575732592eede9820c136329cc",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "jiter",
+      "version": "0.17.0",
+      "url": "https://pypi.org/pypi/jiter/0.17.0/json",
+      "response_sha256": "1cb61cf33ea8e4b6dd80de66d275030013a45b5961e54bb41a3b101deffd6928",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "jmespath",
+      "version": "1.1.0",
+      "url": "https://pypi.org/pypi/jmespath/1.1.0/json",
+      "response_sha256": "de5bfed61841dea8dd10c05206276a42f526f10cd96a57717e24fa8d94f98111",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "url": "https://pypi.org/pypi/jsonschema/4.26.0/json",
+      "response_sha256": "d0c9ccdfa30c3cdc57b048c2be21123dfb0c2f4d6bef2e8324dcb4eac985cfcf",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "url": "https://pypi.org/pypi/jsonschema-specifications/2025.9.1/json",
+      "response_sha256": "91810d8f79384375ad0c0cf631e06903e2790b030d3fad2f1ad657b20ddd839e",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "litellm",
+      "version": "1.104.0",
+      "url": "https://pypi.org/pypi/litellm/1.104.0/json",
+      "response_sha256": "7784f5ab4cd18d2b55343dd352228f7acc453be391029023f8297f6d6b2ad0ea",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": "<3.15,>=3.10"
+    },
+    {
+      "name": "litellm-enterprise",
+      "version": "0.1.71",
+      "url": "https://pypi.org/pypi/litellm-enterprise/0.1.71/json",
+      "response_sha256": "43299fbb29b3d02fc90e69f48d3fa85a8e68a157f6b515d8fa3d15fdf8ea8298",
+      "vulnerabilities": [],
+      "license_expression": "LicenseRef-Proprietary",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "litellm-proxy-extras",
+      "version": "0.4.102.post1",
+      "url": "https://pypi.org/pypi/litellm-proxy-extras/0.4.102.post1/json",
+      "response_sha256": "aeb7d5e45fd0bfab613da209daa44f0eb5434d14a87cb5a67945aab9dc00a58a",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "url": "https://pypi.org/pypi/markdown-it-py/4.2.0/json",
+      "response_sha256": "62affba459c80b1279b5759735f7da3e9c7d24966086ff81ec0303c94512b966",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.4",
+      "url": "https://pypi.org/pypi/markupsafe/3.0.4/json",
+      "response_sha256": "85cd5bce3f85e67ab0b921be9c9ba144a7cc01a2d02b85ad65b1f8dabeac4c57",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "mcp",
+      "version": "2.3.0",
+      "url": "https://pypi.org/pypi/mcp/2.3.0/json",
+      "response_sha256": "d9348a2813cdf05df82f7852afb9f13d8a8035d62c3a5e07fb9657bc5382aad7",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "mcp-types",
+      "version": "2.3.0",
+      "url": "https://pypi.org/pypi/mcp-types/2.3.0/json",
+      "response_sha256": "9df9fb5f5ca5d2ca3c74b2d9fc1b1e9d753e84ab22be14f177a1cbed5e94c419",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2",
+      "url": "https://pypi.org/pypi/mdurl/0.1.2/json",
+      "response_sha256": "c7baac0b363d92cf55f1f3a313f4bb0564bff27343e6a0a4e9d7ff03afc8a6c7",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "msal",
+      "version": "1.39.0",
+      "url": "https://pypi.org/pypi/msal/1.39.0/json",
+      "response_sha256": "ba45dfedc07a8e0ec5120e6f22fbc43678bd51e1a0c70c7adc29d12742fdad79",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "msal-extensions",
+      "version": "1.3.1",
+      "url": "https://pypi.org/pypi/msal-extensions/1.3.1/json",
+      "response_sha256": "e41bbbd91e185484780d3e809c20c2c888ce154c2c7dd475231fa1973ca3ae57",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT License",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "multidict",
+      "version": "6.9.1",
+      "url": "https://pypi.org/pypi/multidict/6.9.1/json",
+      "response_sha256": "19b3cc3ace93ce2c0c093fe7fa83f6873716773326ce1520438de133b6c13224",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache License 2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "nodeenv",
+      "version": "1.11.0",
+      "url": "https://pypi.org/pypi/nodeenv/1.11.0/json",
+      "response_sha256": "7f39fb510eb3383b7ab59841db6b602754b5e2cdf30c81402ced4a820ba97529",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "url": "https://pypi.org/pypi/numpy/2.5.3/json",
+      "response_sha256": "497ade587d7c2cad83a918ca79b9776dbde9eddf4c0abddbfb637b27160e87a9",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license": null,
+      "requires_python": ">=3.12"
+    },
+    {
+      "name": "oauthlib",
+      "version": "4.0.0",
+      "url": "https://pypi.org/pypi/oauthlib/4.0.0/json",
+      "response_sha256": "d8ea69403cf94b7197eaebaa62ba80f881e81ac60cf3d9d2b8bc03e076debe3e",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "openai",
+      "version": "2.54.0",
+      "url": "https://pypi.org/pypi/openai/2.54.0/json",
+      "response_sha256": "b35dd22379182c3f91f7cfed8e25697eff922b84d2ad1a9f04cae60013a48eda",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.0",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.0/json",
+      "response_sha256": "997377fe036918b729c445f8256d340e64fabda5ff00b7d1f52d4e485090ced3",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "orjson",
+      "version": "3.12.0",
+      "url": "https://pypi.org/pypi/orjson/3.12.0/json",
+      "response_sha256": "fad73d1f6e83567c0a1380d127ef6dcb1e6b576eebc8e202f132708372be96b3",
+      "vulnerabilities": [],
+      "license_expression": "MPL-2.0 AND (Apache-2.0 OR MIT)",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "url": "https://pypi.org/pypi/packaging/26.3/json",
+      "response_sha256": "4f190d2f0b312b3086058cee64ab4333bf3ce67fb78b4c2bdb43899049b29f4d",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pfzy",
+      "version": "0.3.4",
+      "url": "https://pypi.org/pypi/pfzy/0.3.4/json",
+      "response_sha256": "b8a88d039caa84dffdd5213e9907f8aa420bb3458dbe5ba10f1ae3c78cd196a4",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.7,<4.0"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "url": "https://pypi.org/pypi/pluggy/1.6.0/json",
+      "response_sha256": "db23d1227f5870da7538b1e29371d9fc9a93b0499989f8e3ef021fdccd75bc8e",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "polars",
+      "version": "1.44.2",
+      "url": "https://pypi.org/pypi/polars/1.44.2/json",
+      "response_sha256": "a873da389a4936813c5807e9388f53a57538dcfc61ddea1c00772608e4bad2c2",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Copyright (c) 2025 Ritchie Vink\n        Copyright (c) 2024 (Some portions) NVIDIA CORPORATION & AFFILIATES. All rights reserved.\n        \n        Permission is hereby granted, free of charge, to any person obtaining a copy\n        of this software and associated documentation files (the \"Software\"), to deal\n        in the Software without restriction, including without limitation the rights\n        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n        copies of the Software, and to permit persons to whom the Software is\n        furnished to do so, subject to the following conditions:\n        \n        The above copyright notice and this permission notice shall be included in all\n        copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n        SOFTWARE.\n        ",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "polars-runtime-32",
+      "version": "1.44.2",
+      "url": "https://pypi.org/pypi/polars-runtime-32/1.44.2/json",
+      "response_sha256": "064c9241629de01e39b5e701255f92632a126fe8e437bb0eb4ecc2387650654b",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "prisma",
+      "version": "0.15.0",
+      "url": "https://pypi.org/pypi/prisma/0.15.0/json",
+      "response_sha256": "507edd0baf82b4479ae926fabf19cfd107669c7f44131d4d4fb8ce40bb5179a2",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "APACHE",
+      "requires_python": ">=3.8.0"
+    },
+    {
+      "name": "prompt-toolkit",
+      "version": "3.0.53",
+      "url": "https://pypi.org/pypi/prompt-toolkit/3.0.53/json",
+      "response_sha256": "6ca170e9088be13eab820444feb4a9cbc8432293efcba8695b8528f5b37c0119",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4",
+      "url": "https://pypi.org/pypi/propcache/0.5.4/json",
+      "response_sha256": "253a90067f5c44ffec37f3f1081934c91fb60edda0dc1e9bdf805edc8cecf693",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "psycopg",
+      "version": "3.3.6",
+      "url": "https://pypi.org/pypi/psycopg/3.3.6/json",
+      "response_sha256": "67267f5b63adf658b4d04848e36f70fc4b32ffc31e3bc6ea9086117bce8cc96a",
+      "vulnerabilities": [],
+      "license_expression": "LGPL-3.0-only",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "psycopg-binary",
+      "version": "3.3.6",
+      "url": "https://pypi.org/pypi/psycopg-binary/3.3.6/json",
+      "response_sha256": "73c5e31cb3c5d454391b3e218a5c7f2d1e693c2cd338e1b63a65cc667a83bfaf",
+      "vulnerabilities": [],
+      "license_expression": "LGPL-3.0-only",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "url": "https://pypi.org/pypi/pycparser/3.0/json",
+      "response_sha256": "116983f7de9bda289946d08200ba1bd7b832547f151165c12bd87d6b8e59b015",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.13.5",
+      "url": "https://pypi.org/pypi/pydantic/2.13.5/json",
+      "response_sha256": "201fdebc5da596df2df23805e8f2b6386888fad4c396dadc48c1c297a61431a5",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "url": "https://pypi.org/pypi/pydantic-core/2.46.5/json",
+      "response_sha256": "5b5b7b259b0b98f2594f92cb9255a1ce3ec978608a81def66193e77f65212a1c",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.15.0",
+      "url": "https://pypi.org/pypi/pydantic-settings/2.15.0/json",
+      "response_sha256": "646b7fd5cf2763825e26b0fbb35835d33c4218cedb611efb9106f06109960608",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "url": "https://pypi.org/pypi/pygments/2.21.0/json",
+      "response_sha256": "330104a10adc8a587e3f98f4e207557125ca0c1d489e129334da5acb2b813a03",
+      "vulnerabilities": [],
+      "license_expression": "BSD-2-Clause",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pyjwt",
+      "version": "2.15.1",
+      "url": "https://pypi.org/pypi/pyjwt/2.15.1/json",
+      "response_sha256": "f13089db8caff0efbdec85ab5c3fa281a3cc76d5b708c74fab427c98e1f29a0d",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "pynacl",
+      "version": "1.6.2",
+      "url": "https://pypi.org/pypi/pynacl/1.6.2/json",
+      "response_sha256": "a0f8d5d1795869eaf0dfad7e00896b9902dd691cb0b64b792aaeae14649934c0",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "pyroscope-io",
+      "version": "0.8.16",
+      "url": "https://pypi.org/pypi/pyroscope-io/0.8.16/json",
+      "response_sha256": "239bf1568097b0803e88a65a930577d1a06eb8c73670d51863a3adf164b305e2",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache 2.0",
+      "requires_python": null
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "url": "https://pypi.org/pypi/pytest/9.1.1/json",
+      "response_sha256": "8ed48304ba7fd0ae974a041f117487b499d553b40e5ce55a9ece677e946f68dd",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "pytest-asyncio",
+      "version": "1.4.0",
+      "url": "https://pypi.org/pypi/pytest-asyncio/1.4.0/json",
+      "response_sha256": "7d73d89418af6bc6b73a93948bc304486249893ec37cd973c25dd3ff8038c08f",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "url": "https://pypi.org/pypi/python-dateutil/2.9.0.post0/json",
+      "response_sha256": "65747bc111eb972ae6f477f211253f21e25738cb7d894ddb80ddd65f620b58a7",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Dual License",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "url": "https://pypi.org/pypi/python-dotenv/1.2.4/json",
+      "response_sha256": "89701376846132aefd76202d07dad6e84febe4a426a12973004e13018af15c41",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32",
+      "url": "https://pypi.org/pypi/python-multipart/0.0.32/json",
+      "response_sha256": "a031fb02f69ea8125edc9473c7bc8d3876556de8812dcd694d76482631d7fc2b",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "url": "https://pypi.org/pypi/pyyaml/6.0.3/json",
+      "response_sha256": "c3f35597bc2f08cc990c2a5fe57bef6687b3a3d7c61d8b0ba4cc067777eb1def",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "redis",
+      "version": "8.1.0",
+      "url": "https://pypi.org/pypi/redis/8.1.0/json",
+      "response_sha256": "4b2ed64dcffaf63795f752b9610792d0c569968ea1048569a7075a6560f5a1d6",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "url": "https://pypi.org/pypi/referencing/0.37.0/json",
+      "response_sha256": "a67968d8e03aa45e650fc2ff0d07796676db1a7841ce8e810bf2dba5af689464",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29",
+      "url": "https://pypi.org/pypi/regex/2026.9.29/json",
+      "response_sha256": "08fc1fa7daa8db0404cbbaea4eed71acc7798421386d3de50f92302068fe58c5",
+      "vulnerabilities": [],
+      "license_expression": "Apache-2.0 AND CNRI-Python",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "url": "https://pypi.org/pypi/requests/2.34.2/json",
+      "response_sha256": "8622e50ffd295ed759ec793f2a009172a4ed0204bbc5e948de23111bc3d2aeae",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "restrictedpython",
+      "version": "8.5",
+      "url": "https://pypi.org/pypi/restrictedpython/8.5/json",
+      "response_sha256": "02190f4af963e2ee9dd6004a8d2758b3ce1aad68511d1022019b3bf47e8cc7ea",
+      "vulnerabilities": [],
+      "license_expression": "ZPL-2.1",
+      "license": null,
+      "requires_python": "<3.16,>=3.10"
+    },
+    {
+      "name": "rich",
+      "version": "13.9.4",
+      "url": "https://pypi.org/pypi/rich/13.9.4/json",
+      "response_sha256": "cd453fdf803d9549a2d1fa973fa397dfc1d1918fdc07a7218762a7a00c469d92",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.8.0"
+    },
+    {
+      "name": "rpds-py",
+      "version": "2026.9.1",
+      "url": "https://pypi.org/pypi/rpds-py/2026.9.1/json",
+      "response_sha256": "93808b9ff27aabe26d9a4f03b28422d1d05c3fb8716d88f3826e7ddf4b0b258b",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.11"
+    },
+    {
+      "name": "rq",
+      "version": "2.12.0",
+      "url": "https://pypi.org/pypi/rq/2.12.0/json",
+      "response_sha256": "b1ccb63bcbc81e8bbf110c183a3f7d310a6638aca7f7563d0eb61e19242966cb",
+      "vulnerabilities": [],
+      "license_expression": "BSD-2-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "s3transfer",
+      "version": "0.19.2",
+      "url": "https://pypi.org/pypi/s3transfer/0.19.2/json",
+      "response_sha256": "47d3b7fa53ad53f0f96c331aa7805a87dd49b741e7d28fdb31467e9cac9dd0df",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache License 2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "url": "https://pypi.org/pypi/six/1.17.0/json",
+      "response_sha256": "d8de39dd52b73048d81a8fd78022ee2bc72f8b568bcf0d88e5d5069c302b1208",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+    },
+    {
+      "name": "sniffio",
+      "version": "1.3.1",
+      "url": "https://pypi.org/pypi/sniffio/1.3.1/json",
+      "response_sha256": "1217ad6ed84734e8f77ecfd151d91786d5a633b0482af1cde28185de0159bd37",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT OR Apache-2.0",
+      "requires_python": ">=3.7"
+    },
+    {
+      "name": "socksio",
+      "version": "1.0.0",
+      "url": "https://pypi.org/pypi/socksio/1.0.0/json",
+      "response_sha256": "3de2225b858b17026924049bac176df7c758559c657c22039c36f8a9ebcd956e",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "",
+      "requires_python": ">=3.6"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.14.0",
+      "url": "https://pypi.org/pypi/soundfile/0.14.0/json",
+      "response_sha256": "c2376b7605f96c42cbb2b4acfe2634528e4d942c9b05fec400993f14c5f50cc5",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD 3-Clause License",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.5.0",
+      "url": "https://pypi.org/pypi/sse-starlette/3.5.0/json",
+      "response_sha256": "d40c291ea5353d4175a52678d53dad2c82456b78fdb1015b9ca4b927ddd767ef",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "url": "https://pypi.org/pypi/starlette/1.7.0/json",
+      "response_sha256": "3c8a35b55ca178a7db904e8b69b155fd1146e56bd958623642cf533c78491e5c",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "tiktoken",
+      "version": "0.14.0",
+      "url": "https://pypi.org/pypi/tiktoken/0.14.0/json",
+      "response_sha256": "05ff3946dc41fffc7ba7a35826e6385e29baa736fbe4fcc8ac9a37088049d58a",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT License\n        \n        Copyright (c) 2022 OpenAI, Shantanu Jain\n        \n        Permission is hereby granted, free of charge, to any person obtaining a copy\n        of this software and associated documentation files (the \"Software\"), to deal\n        in the Software without restriction, including without limitation the rights\n        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n        copies of the Software, and to permit persons to whom the Software is\n        furnished to do so, subject to the following conditions:\n        \n        The above copyright notice and this permission notice shall be included in all\n        copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n        SOFTWARE.\n        ",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.23.2",
+      "url": "https://pypi.org/pypi/tokenizers/0.23.2/json",
+      "response_sha256": "796fa8d3b775a92c9834f46a85bc2dfa11b37307d2b535d677e5e45a42e4fe6c",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "tomlkit",
+      "version": "0.15.1",
+      "url": "https://pypi.org/pypi/tomlkit/0.15.1/json",
+      "response_sha256": "1fbf5e091a2fa4aec078b995db1ba7dc341fd28746895eb9b910442b1558c0cb",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "url": "https://pypi.org/pypi/tqdm/4.70.1/json",
+      "response_sha256": "0589819a1bc3437c8f215d95f3f64ff24d602dc6a62598eb8d2e420c8e6a0b25",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MPL-2.0 AND MIT",
+      "requires_python": ">=3.8"
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
+      "url": "https://pypi.org/pypi/truststore/0.10.4/json",
+      "response_sha256": "803a5dafe852bdd8b209c3df0dd7488c8f949ce7d1862820557704db1134cb41",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "url": "https://pypi.org/pypi/typing-extensions/4.16.0/json",
+      "response_sha256": "2140da00d62dde967f52d0be0ae28444f1d6a3fe603f52c83c23988c32122d5a",
+      "vulnerabilities": [],
+      "license_expression": "PSF-2.0",
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "url": "https://pypi.org/pypi/typing-inspection/0.4.4/json",
+      "response_sha256": "0605416f2f37f2df04e45360cf5ce4ca5eeca6d414bb6ddb1ec5a9893c62ac30",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "tzlocal",
+      "version": "5.4.4",
+      "url": "https://pypi.org/pypi/tzlocal/5.4.4/json",
+      "response_sha256": "8dfe74e72e28f55860879e1750f12e0d0ade29611ff1206212099ff6eb217a60",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "url": "https://pypi.org/pypi/urllib3/2.8.0/json",
+      "response_sha256": "5315e7401db3cacccd0c2ce5daf81f752a9cc3614b18c37f2b79930b7159ce2f",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "url": "https://pypi.org/pypi/uvicorn/0.54.0/json",
+      "response_sha256": "65378bebfff63d5a58ba9b6ff6ff1ae5047721da28e27802e2aafa19fece8444",
+      "vulnerabilities": [],
+      "license_expression": "BSD-3-Clause",
+      "license": null,
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "uvloop",
+      "version": "0.23.0",
+      "url": "https://pypi.org/pypi/uvloop/0.23.0/json",
+      "response_sha256": "32406ae3cbefbdc83a9b713ba9a4cee587513f1919e1a0e3bb42e0ae6986caae",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "MIT License",
+      "requires_python": ">=3.8.1"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.2",
+      "url": "https://pypi.org/pypi/wcwidth/0.9.2/json",
+      "response_sha256": "01a7c33922cf82a00a6d687cbc33725bf383d42c8f23de547a8e10f9b34f16d7",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": null,
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1",
+      "url": "https://pypi.org/pypi/websockets/15.0.1/json",
+      "response_sha256": "60bfa9592eacef2fb478bafc3cf95d9414cff0d951ab109885b92a155c217c00",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "BSD-3-Clause",
+      "requires_python": ">=3.9"
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "url": "https://pypi.org/pypi/yarl/1.25.1/json",
+      "response_sha256": "a07cf3b564a15e3be66faacf0c81a23497ebfbf1ec849a3a77b494ba4b60cf0f",
+      "vulnerabilities": [],
+      "license_expression": null,
+      "license": "Apache-2.0",
+      "requires_python": ">=3.10"
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.1",
+      "url": "https://pypi.org/pypi/zipp/4.1.1/json",
+      "response_sha256": "c614da9079e884aad9dfa8fc6ee66ccc4d077985de3c91b6099948480c289c77",
+      "vulnerabilities": [],
+      "license_expression": "MIT",
+      "license": null,
+      "requires_python": ">=3.10"
+    }
+  ],
+  "source_documents": {
+    "litellm-advisories.json": {
+      "url": "https://api.github.com/repos/BerriAI/litellm/security-advisories?per_page=100",
+      "path": "evidence/supply-chain/raw/litellm-advisories.json",
+      "sha256": "2ad39d7b115d23fa3adf19d269503beb529df9c9b753abc369e933380743bd59"
+    },
+    "litellm-LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/BerriAI/litellm/v1.104.0/LICENSE",
+      "path": "evidence/supply-chain/raw/litellm-LICENSE.txt",
+      "sha256": "b170d6bf8e8835dd357e011681db028f4d51e2fb0ea892058f56e01fb39b8273"
+    },
+    "debian-squid-security.html": {
+      "url": "https://security-tracker.debian.org/tracker/source-package/squid",
+      "path": "evidence/supply-chain/raw/debian-squid-security.html",
+      "sha256": "f3a21df8d83f937daf93424ec9b05c29558ade1011a3c1d8c564f4073c0669e0"
+    }
+  }
+}

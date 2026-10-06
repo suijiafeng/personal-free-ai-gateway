@@ -1,0 +1,9 @@
+[
+  {"choices": [{"index": 0, "delta": {"role": "assistant", "content": ""}, "finish_reason": null}]},
+  {"choices": [{"index": 0, "delta": {"content": ""}, "finish_reason": null}]},
+  {"choices": [{"index": 0, "delta": {"content": "Hello"}, "finish_reason": null}]},
+  {"choices": [{"index": 0, "delta": {"content": " from the"}, "finish_reason": null}]},
+  {"choices": [{"index": 0, "delta": {"content": " mock upstream."}, "finish_reason": null}]},
+  {"choices": [{"index": 0, "delta": {}, "finish_reason": "stop"}]},
+  {"choices": [], "usage": {"prompt_tokens": 8, "completion_tokens": 6, "total_tokens": 14}}
+]

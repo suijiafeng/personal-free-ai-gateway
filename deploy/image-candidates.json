@@ -1,0 +1,133 @@
+{
+  "checked_at": "2026-10-06",
+  "status": "registry_content_digests_verified_not_runtime_tested",
+  "container_runtime_tested": false,
+  "signature_verified": false,
+  "images": [
+    {
+      "purpose": "Python runtime base",
+      "reference": "python:3.12.15-slim-bookworm",
+      "digest": "sha256:7753c33391fc9f01d1984375bf375eb6686d52ba10db6043a86634a5ccf90dcf",
+      "official_catalog": "https://raw.githubusercontent.com/docker-library/official-images/master/library/python",
+      "dockerfile_source_commit": "2a3b794c223ab067d122719541cdd54a068732a5",
+      "immutable_reference": "python:3.12.15-slim-bookworm@sha256:7753c33391fc9f01d1984375bf375eb6686d52ba10db6043a86634a5ccf90dcf",
+      "registry_manifest_url": "https://registry-1.docker.io/v2/library/python/manifests/3.12.15-slim-bookworm",
+      "manifest_file": "evidence/supply-chain/raw/python-index.json",
+      "platforms": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:2ed6491b93cd49272ee6de2b5a38440c3448360322c089fc23e370722d74179d",
+          "immutable_reference": "python:3.12.15-slim-bookworm@sha256:2ed6491b93cd49272ee6de2b5a38440c3448360322c089fc23e370722d74179d",
+          "manifest_file": "evidence/supply-chain/raw/python-linux-amd64.json"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": "v8",
+          "digest": "sha256:739ba32ae445e8d58f3d90feb85f83bebc8346f8dd280fa1eb5848f4ff1ed163",
+          "immutable_reference": "python:3.12.15-slim-bookworm@sha256:739ba32ae445e8d58f3d90feb85f83bebc8346f8dd280fa1eb5848f4ff1ed163",
+          "manifest_file": "evidence/supply-chain/raw/python-linux-arm64.json"
+        }
+      ]
+    },
+    {
+      "purpose": "Prisma Node binary build source",
+      "reference": "node:24.21.0-bookworm-slim",
+      "digest": "sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20",
+      "official_catalog": "https://raw.githubusercontent.com/docker-library/official-images/master/library/node",
+      "dockerfile_source_commit": "93a7bafc324a85ac1ee461604cff87cffacb6d7a",
+      "immutable_reference": "node:24.21.0-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20",
+      "registry_manifest_url": "https://registry-1.docker.io/v2/library/node/manifests/24.21.0-bookworm-slim",
+      "manifest_file": "evidence/supply-chain/raw/node-index.json",
+      "platforms": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:51b1100cc2a83d370c6a60952e3f2989c8a43159d0e38586e090f3b3326efefd",
+          "immutable_reference": "node:24.21.0-bookworm-slim@sha256:51b1100cc2a83d370c6a60952e3f2989c8a43159d0e38586e090f3b3326efefd",
+          "manifest_file": "evidence/supply-chain/raw/node-linux-amd64.json"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": "v8",
+          "digest": "sha256:ba6b7d0ee561d9d49deb99e2b93c98632cc287b6cca1a6b18d66127054efa4dc",
+          "immutable_reference": "node:24.21.0-bookworm-slim@sha256:ba6b7d0ee561d9d49deb99e2b93c98632cc287b6cca1a6b18d66127054efa4dc",
+          "manifest_file": "evidence/supply-chain/raw/node-linux-arm64.json"
+        }
+      ]
+    },
+    {
+      "purpose": "Native key and gateway extension database",
+      "reference": "postgres:17.11-bookworm",
+      "digest": "sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+      "official_catalog": "https://raw.githubusercontent.com/docker-library/official-images/master/library/postgres",
+      "dockerfile_source_commit": "2603e26e245e558218728ee14e0a42dcb020dc7f",
+      "immutable_reference": "postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826",
+      "registry_manifest_url": "https://registry-1.docker.io/v2/library/postgres/manifests/17.11-bookworm",
+      "manifest_file": "evidence/supply-chain/raw/postgres-index.json",
+      "platforms": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+          "immutable_reference": "postgres:17.11-bookworm@sha256:66aafa11cf15800a3c94763f7e11d1e7b2e37e5e84bc4ce027cb6e1e4bfaf4df",
+          "manifest_file": "evidence/supply-chain/raw/postgres-linux-amd64.json"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": "v8",
+          "digest": "sha256:a85953d6f830fd55a12929df3b7a4fa94dc96d652de62d2d714e0867ccb3670d",
+          "immutable_reference": "postgres:17.11-bookworm@sha256:a85953d6f830fd55a12929df3b7a4fa94dc96d652de62d2d714e0867ccb3670d",
+          "manifest_file": "evidence/supply-chain/raw/postgres-linux-arm64.json"
+        }
+      ]
+    },
+    {
+      "purpose": "Restricted loopback consumer and administrator ingress",
+      "reference": "nginx:1.30.5-alpine3.24",
+      "digest": "sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94",
+      "official_catalog": "https://raw.githubusercontent.com/docker-library/official-images/master/library/nginx",
+      "dockerfile_source_commit": "a16f1329e13e7273c4103f75d863ca625b75109e",
+      "immutable_reference": "nginx:1.30.5-alpine3.24@sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94",
+      "registry_manifest_url": "https://registry-1.docker.io/v2/library/nginx/manifests/1.30.5-alpine3.24",
+      "manifest_file": "evidence/supply-chain/raw/nginx-index.json",
+      "platforms": [
+        {
+          "os": "linux",
+          "architecture": "amd64",
+          "variant": null,
+          "digest": "sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+          "immutable_reference": "nginx:1.30.5-alpine3.24@sha256:8f84ed99befc3891b8f329c5c202785278a2cfb7c25107d57fb2a134a3117433",
+          "manifest_file": "evidence/supply-chain/raw/nginx-linux-amd64.json"
+        },
+        {
+          "os": "linux",
+          "architecture": "arm64",
+          "variant": "v8",
+          "digest": "sha256:3abad30db61dfb2a339ea21acc9f3e6bbe78e291fcff2f835f4510c8fdfcbd83",
+          "immutable_reference": "nginx:1.30.5-alpine3.24@sha256:3abad30db61dfb2a339ea21acc9f3e6bbe78e291fcff2f835f4510c8fdfcbd83",
+          "manifest_file": "evidence/supply-chain/raw/nginx-linux-arm64.json"
+        }
+      ]
+    }
+  ],
+  "required_before_production": [
+    "Verify applicable publisher signatures/provenance and final OS/npm advisories/licenses",
+    "Build precise images and record final image/config digests, SBOM and Prisma engine hashes",
+    "Test container networking, migrations and rollback on the selected Mac",
+    "Verify the built Squid7.7 binary, current advisories and actual CONNECT allow/deny behavior"
+  ],
+  "verification_method": {
+    "transport": "Docker Registry V2 HTTPS, public anonymous pull scope; token never persisted",
+    "content_hash_checked": true,
+    "docker_content_digest_header_matched": true,
+    "child_descriptor_hash_matched": true,
+    "recheck_command": "python tools/supplychain_registry_check.py --online"
+  }
+}

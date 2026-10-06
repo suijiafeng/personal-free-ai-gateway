@@ -1,0 +1,85 @@
+# Production is deliberately unavailable until real account/capability review.
+schema_version: 1
+profile: production
+alias: general-free
+privacy_scope: non_sensitive
+allowed_hosts:
+- api.groq.com
+- generativelanguage.googleapis.com
+limits: {}
+pools:
+- id: groq-review-required
+  provider: groq
+  account_scope: REVIEW_REQUIRED
+  model_scope:
+  - REVIEW_REQUIRED
+  dimension: requests
+  window: unknown
+  reset_timezone: null
+  shared_scope_evidence: 'NOT VERIFIED: complete account and model-specific review
+    before enabling'
+- id: gemini-review-required
+  provider: gemini
+  account_scope: REVIEW_REQUIRED
+  model_scope:
+  - REVIEW_REQUIRED
+  dimension: requests
+  window: unknown
+  reset_timezone: null
+  shared_scope_evidence: 'NOT VERIFIED: complete account and model-specific review
+    before enabling'
+deployments:
+- id: groq-primary
+  provider: groq
+  adapter: openai_sdk
+  model: groq/REVIEW_REQUIRED
+  api_base: https://api.groq.com/openai/v1
+  credential_env: GROQ_API_KEY
+  enabled: false
+  order: 1
+  eligibility:
+    status: unknown
+    evidence: ''
+    checked_at: null
+    review_by: null
+    billing_hard_limit: false
+    privacy_scopes: []
+  capability:
+    roles:
+    - system
+    - user
+    - assistant
+    streaming: false
+    max_output_tokens: 1024
+    max_input_chars: 8000
+    parameters:
+    - max_completion_tokens
+  quota_pools:
+  - groq-review-required
+- id: gemini-secondary
+  provider: gemini
+  adapter: openai_sdk
+  model: gemini/REVIEW_REQUIRED
+  api_base: https://generativelanguage.googleapis.com/v1beta/openai
+  credential_env: GEMINI_API_KEY
+  enabled: false
+  order: 2
+  eligibility:
+    status: unknown
+    evidence: ''
+    checked_at: null
+    review_by: null
+    billing_hard_limit: false
+    privacy_scopes: []
+  capability:
+    roles:
+    - system
+    - user
+    - assistant
+    streaming: false
+    max_output_tokens: 1024
+    max_input_chars: 8000
+    parameters:
+    - max_completion_tokens
+  quota_pools:
+  - gemini-review-required

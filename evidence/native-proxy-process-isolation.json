@@ -1,0 +1,101 @@
+{
+  "reviewed_at": "2026-10-06T10:31:52Z",
+  "scope": "Two sequential native Proxy lifespans in one pytest interpreter against synthetic loopback and disposable PostgreSQL",
+  "minimal_result": {
+    "baseline_first_instance": "passed",
+    "sdk_second_instance": "failed",
+    "second_status": 503,
+    "upstream_call_counts": {}
+  },
+  "guard_uses_current_app_state": true,
+  "same_guard_registration_count": 2,
+  "current_native_models": [
+    {
+      "model": "gateway_openai_sdk/openai/mock-primary",
+      "id": "mock-primary"
+    },
+    {
+      "model": "gateway_openai_sdk/openai/mock-secondary",
+      "id": "mock-secondary"
+    }
+  ],
+  "current_policy_models": [
+    {
+      "model": "openai/mock-primary",
+      "adapter": "openai_sdk",
+      "id": "mock-primary"
+    },
+    {
+      "model": "openai/mock-secondary",
+      "adapter": "openai_sdk",
+      "id": "mock-secondary"
+    }
+  ],
+  "state_healthy": true,
+  "event_summary": [
+    {
+      "event": "candidate_decision",
+      "phase": "request_validation",
+      "attempt": 0,
+      "decision": "eligible",
+      "deployment_id": "mock-primary",
+      "exclusion_reason": null
+    },
+    {
+      "event": "candidate_decision",
+      "phase": "request_validation",
+      "attempt": 0,
+      "decision": "eligible",
+      "deployment_id": "mock-secondary",
+      "exclusion_reason": null
+    },
+    {
+      "event": "candidate_decision",
+      "phase": "native_filter",
+      "attempt": 0,
+      "decision": "eligible",
+      "deployment_id": "mock-primary",
+      "exclusion_reason": null
+    },
+    {
+      "event": "candidate_decision",
+      "phase": "native_filter",
+      "attempt": 0,
+      "decision": "eligible",
+      "deployment_id": "mock-secondary",
+      "exclusion_reason": null
+    },
+    {
+      "event": "attempt_started",
+      "status": "running",
+      "attempt": 1,
+      "deployment_id": "mock-primary"
+    },
+    {
+      "event": "candidate_decision",
+      "phase": "native_filter",
+      "attempt": 1,
+      "decision": "excluded",
+      "deployment_id": "mock-primary",
+      "exclusion_reason": "quota_or_cooldown_unavailable"
+    },
+    {
+      "event": "candidate_decision",
+      "phase": "native_filter",
+      "attempt": 1,
+      "decision": "eligible",
+      "deployment_id": "mock-secondary",
+      "exclusion_reason": null
+    },
+    {
+      "event": "attempt_finished",
+      "status": "failed",
+      "attempt": 1,
+      "error_code": "no_eligible_free_model",
+      "deployment_id": "mock-primary"
+    }
+  ],
+  "version": "litellm==1.104.0",
+  "callback_initializer_sha256": "9deb03292ce724fc9642b23435ce979ef2378a3d8a98f236f583ac30f3581960",
+  "resolution": "One successful build_app per Python process. Canonical runner executes main and SDK Proxy modules in fresh pytest subprocesses, preserves both phase JUnit files, and fails if either phase or a report fails."
+}

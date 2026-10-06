@@ -1,0 +1,7 @@
+# Add only if Groq account, model, privacy and free-only conditions are approved.
+services:
+  gateway:
+    secrets: [groq_api_key]
+secrets:
+  groq_api_key:
+    file: ${GROQ_API_KEY_FILE:?Set the reviewed absolute secret-file path, never the key value}

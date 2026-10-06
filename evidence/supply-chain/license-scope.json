@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-06",
+  "legal_clearance": false,
+  "components": [
+    {
+      "name": "litellm",
+      "version": "1.104.0",
+      "license": "MIT except enterprise scope",
+      "source": "https://github.com/BerriAI/litellm/blob/v1.104.0/LICENSE",
+      "used_features": [
+        "Chat Completions gateway",
+        "virtual keys",
+        "master-key authentication",
+        "native router and fallbacks",
+        "custom callback hooks"
+      ],
+      "enterprise_features_enabled": false
+    },
+    {
+      "name": "litellm-enterprise",
+      "version": "0.1.71",
+      "license": "BerriAI Enterprise License",
+      "bundled_by": "litellm[proxy]",
+      "license_file_sha256": "a3160d1176cb556447255ca8652855486d681f8025550291828796a439e1b2f9",
+      "note": "The standard proxy extra includes enterprise package/shared imports; it is not all-MIT. Official required features are OSS. Preserve the independent enterprise license text and scope ambiguity without treating personal OSS feature use as automatically requiring a paid enterprise license.",
+      "installed_in_current_lock": true,
+      "enterprise_features_are_optional": true,
+      "conditional_review_scope": [
+        "Enabling enterprise features",
+        "Redistributing compiled bundles or images",
+        "Organization-specific package admission policy"
+      ]
+    },
+    {
+      "name": "litellm-proxy-extras",
+      "version": "0.4.102.post1",
+      "scope": "Native proxy schema/migrations; see dependency-inventory.json for declared metadata"
+    },
+    {
+      "name": "Squid",
+      "version": "7.7",
+      "license": "GPL-2.0-or-later",
+      "source": "https://github.com/squid-cache/squid/tree/SQUID_7_7",
+      "used_features": [
+        "explicit forward CONNECT proxy only"
+      ],
+      "distribution_note": "Preserve license/source obligations if distributing a built image; this repository distributes recipe/config, not a prebuilt Squid image."
+    }
+  ],
+  "other_dependencies": "124 Python components inventoried in evidence/dependency-inventory.json; OS/npm/final-image license inventory remains a build-stage gate.",
+  "scope": "Personal-use basic AI application; official required OSS feature scope checked. Not a legal opinion.",
+  "personal_oss_feature_scope_verified": true,
+  "enterprise_feature_or_distribution_policy_review_is_conditional": true
+}

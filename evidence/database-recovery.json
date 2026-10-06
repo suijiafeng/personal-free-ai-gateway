@@ -1,0 +1,388 @@
+{
+  "status": "passed",
+  "scope": "same-version disposable native PostgreSQL database restore",
+  "postgresql_version": "17.11 (Debian 17.11-0+deb13u1)",
+  "tool_versions": {
+    "pg_dump": "17.11",
+    "createdb": "17.11",
+    "pg_restore": "17.11"
+  },
+  "backup_format": "custom",
+  "backup_bytes": 289276,
+  "backup_deleted": true,
+  "source_snapshot_consistent": true,
+  "restore_transactional": true,
+  "actual_failed_restore_rolled_back_all_partial_ddl": true,
+  "schema_names": [
+    "public",
+    "gateway_ext"
+  ],
+  "table_count": 86,
+  "total_rows": 1377,
+  "migration_counts": {
+    "total": 189,
+    "finished": 189,
+    "unfinished": 0
+  },
+  "tables_identical": true,
+  "observations_retained": true,
+  "observation_rows": 1,
+  "native_active_key_rows": 2,
+  "native_deleted_key_rows": 22,
+  "native_key_tables_identical": true,
+  "table_manifest": {
+    "gateway_ext.events": {
+      "rows": 1159,
+      "sha256": "49ca4967ba6112ee383291d4bc543e08e75071ab1520991f5ec7f12dbf9bf029"
+    },
+    "gateway_ext.observations": {
+      "rows": 1,
+      "sha256": "5405562306d8eb4dc463ac895c3a1608f5e3b01719958a3af25cf756af74fcf8"
+    },
+    "gateway_ext.pools": {
+      "rows": 2,
+      "sha256": "1468902cef3de60b5365b09f7faf860b4693e958a5ea5cb362582c3770d715b5"
+    },
+    "public.LiteLLM_AccessGroupTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AdaptiveRouterSession": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AdaptiveRouterState": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AgentsTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AuditLog": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AutoRouterBaselineComparison": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AutoRouterBaselineObservation": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AutoRouterSession": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_AutoRouterUserSession": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_BudgetTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_BudgetWindowSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_CacheConfig": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ClaudeCodePluginTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_Config": {
+      "rows": 1,
+      "sha256": "fce36e530f34aef2afc8d0e491b8cf43a652888a87d3a11a8d124f10c7085656"
+    },
+    "public.LiteLLM_ConfigOverrides": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_CredentialsTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_CronJob": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyAgentSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyEndUserSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyGatewayRequests": {
+      "rows": 1,
+      "sha256": "b2bb2c9df8f867c8cf0496c35811debba51e052ee915bde06e996316ca007525"
+    },
+    "public.LiteLLM_DailyGlobalSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyGuardrailMetrics": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyGuardrailUsageUnits": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyOrganizationSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyPolicyMetrics": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyTagSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyTeamSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyToolSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DailyUserSpend": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DeletedTeamTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_DeletedVerificationToken": {
+      "rows": 22,
+      "sha256": "656a94ead00557145a6cdb5af74ee75585c013b31866f27202f903ca82edc9b0"
+    },
+    "public.LiteLLM_DeprecatedVerificationToken": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_EndUserTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ErrorLogs": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_GuardrailsTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_HealthCheckTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_InvitationLink": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_JWTKeyMapping": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MCPServerOAuthClient": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MCPServerTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MCPToolsetTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MCPUserCredentials": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MCPUserEnvVars": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedFileContentTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedFileTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedObjectTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedVectorStoreIndexTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedVectorStoreTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ManagedVectorStoresTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_MemoryTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ModelAccessGroupBudgetTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ModelTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ObjectPermissionTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_OrganizationMembership": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_OrganizationTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_PolicyAttachmentTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_PolicyTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ProjectTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_PromptTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ProxyModelTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ProxyWorkerHeartbeat": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SSOConfig": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SSOIdentityAssertion": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SearchToolsTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ShadowEvalAttempt": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ShadowEvalFunnel": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ShadowEvalJob": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SkillsTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SpendLogGuardrailIndex": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SpendLogToolIndex": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_SpendLogs": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_TagTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_TeamMembership": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_TeamTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_ToolTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_UISettings": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_UserNotifications": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_UserTable": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_VerificationToken": {
+      "rows": 2,
+      "sha256": "eaec961806b68dba90830b893cdc06c2fc9e907f39549193d1183551d5098a7c"
+    },
+    "public.LiteLLM_WorkflowEvent": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_WorkflowMessage": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public.LiteLLM_WorkflowRun": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "public._prisma_migrations": {
+      "rows": 189,
+      "sha256": "5ecc8e9bf7af303c3ab1053ceea105b205c73f91f2e923c5c0abcbcb767924e7"
+    }
+  },
+  "manifest_sha256": "b19e1f9e75df723701c6e9b637850b47a74ed78900b7d3e38dcf06a902f005cb",
+  "elapsed_seconds": 1.831,
+  "excludes": [
+    "Docker/Compose deployment",
+    "configuration rollback",
+    "cross-version migration",
+    "restored proxy authentication",
+    "real provider credentials"
+  ]
+}

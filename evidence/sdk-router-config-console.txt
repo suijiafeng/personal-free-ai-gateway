@@ -1,0 +1,40 @@
+..................................................                       [100%]
+=============================== warnings summary ===============================
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Item 'summary' on TypedDict class 'ChatCompletionReasoningItem' is using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'weekdays' on TypedDict class 'OffPeakWindow' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'windows', 'weekday_timezone', 'input_cost_per_token', 'output_cost_per_token', 'output_cost_per_reasoning_token', 'cache_read_input_token_cost', 'cache_creation_input_token_cost' on TypedDict class 'OffPeakPricing' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'supports_prompt_cache_breakpoint', 'supports_thinking_cache_preservation', 'supports_legacy_thinking', 'thinking_always_on', 'reasoning_effort_levels', 'default_reasoning_effort', 'supports_anthropic_thinking_payload', 'supports_anthropic_compaction', 'supported_audio_formats', 'vertex_ai_audio_api', 'input_cost_per_token_ultrafast', 'cache_creation_input_token_cost_ultrafast', 'cache_read_input_audio_token_cost', 'cache_read_input_image_token_cost', 'cache_read_input_token_cost_ultrafast', 'cache_read_input_token_cost_batches', 'cache_read_input_token_cost_above_272k_tokens_batches', 'cache_creation_input_token_cost_batches', 'cache_creation_input_token_cost_above_200k_tokens_batches', 'cache_creation_input_token_cost_above_272k_tokens_batches', 'off_peak_pricing', 'input_cost_per_audio_token_batches', 'input_cost_per_image_token_batches', 'input_cost_per_video_token_batches', 'input_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_ultrafast', 'regional_endpoint_uplift_multiplier', 'output_cost_per_pixel', 'output_cost_per_second_480p', 'output_cost_per_second_720p', 'output_cost_per_second_768p', 'output_cost_per_second_2k', 'output_cost_per_second_4k', 'output_cost_per_image_512', 'output_cost_per_image_1024', 'output_cost_per_image_1536', 'ocr_cost_per_page_batches', 'annotation_cost_per_page_batches', 'google_maps_grounding_cost_per_query' on TypedDict class 'ModelInfo' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'langfuse_environment', 'langfuse_span_scope', 'arize_success_sampling_rate', 'arize_error_sampling_rate' on TypedDict class 'StandardCallbackDynamicParams' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'probabilities', 'threshold', 'predicted_tier', 'request_type' on TypedDict class 'StandardLoggingHeuristicV2Forecast' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py::test_stream_bridge_contract[ok-complete-counts0]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'classifier_probabilities', 'classifier_confidence', 'heuristic_v2_forecast', 'classifier_calibrated_p_solve', 'classifier_calibration_version', 'classifier_efficient_p_solve', 'classifier_capable_p_solve', 'classifier_calibrated_efficient_p_solve', 'classifier_calibrated_capable_p_solve', 'classifier_max_quality_gap', 'classifier_prompt_version' on TypedDict class 'StandardLoggingRoutingDecision' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py: 13 warnings
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/integrations/custom_logger.py:568: RuntimeWarning: coroutine 'router_cooldown_event_callback' was never awaited
+    print_verbose(f"Custom Logger Error - {traceback.format_exc()}")
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+50 passed, 22 warnings in 21.13s

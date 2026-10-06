@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-06T10:24:19.950362+00:00",
+  "environment": "disposable loopback PostgreSQL; no Docker, Mac or production deployment",
+  "postgres_version": "17.11 (Debian 17.11-0+deb13u1)",
+  "native_migrations": 189,
+  "checks": [
+    "four distinct SCRAM identities; wrong password rejected",
+    "failed password-bearing role DDL produces no credential logs; global logging unchanged",
+    "nonsuperuser migration owner; repeatable native deploy",
+    "runtime CRUD; CREATE/ALTER/DROP/TEMP/TRUNCATE/SET ROLE/role creation denied",
+    "runtime migration history mutation denied",
+    "runtime guard rejects elevated DSNs and TEMP privilege drift",
+    "native proxy startup, virtual-key creation/authentication/completion/revocation with runtime role",
+    "backup SELECT-only even with read-only preference disabled",
+    "backup-role pg_dump; migration-role pg_restore; grants restored"
+  ],
+  "external_gates": [
+    "authorized independent real secrets",
+    "Docker Compose build/secret ownership/startup",
+    "selected Mac/container acceptance",
+    "provider qualification and zero-billing verification"
+  ],
+  "credentials_recorded": false
+}

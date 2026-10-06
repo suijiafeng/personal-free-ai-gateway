@@ -1,0 +1,43 @@
+........................................................................ [ 78%]
+....................                                  [100%]
+=============================== warnings summary ===============================
+tests/test_metadata.py::test_native_nonstream_raw_callback_precedes_normalization[openai-ok]
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Item 'summary' on TypedDict class 'ChatCompletionReasoningItem' is using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py: 12 warnings
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/model_response_utils.py:18: PydanticDeprecatedSince211: Accessing the 'model_computed_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    attribute: Final[_AttributeView] = {"value": getattr(source, name)}
+
+tests/test_metadata.py: 12 warnings
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/model_response_utils.py:18: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    attribute: Final[_AttributeView] = {"value": getattr(source, name)}
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'weekdays' on TypedDict class 'OffPeakWindow' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'windows', 'weekday_timezone', 'input_cost_per_token', 'output_cost_per_token', 'output_cost_per_reasoning_token', 'cache_read_input_token_cost', 'cache_creation_input_token_cost' on TypedDict class 'OffPeakPricing' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'supports_prompt_cache_breakpoint', 'supports_thinking_cache_preservation', 'supports_legacy_thinking', 'thinking_always_on', 'reasoning_effort_levels', 'default_reasoning_effort', 'supports_anthropic_thinking_payload', 'supports_anthropic_compaction', 'supported_audio_formats', 'vertex_ai_audio_api', 'input_cost_per_token_ultrafast', 'cache_creation_input_token_cost_ultrafast', 'cache_read_input_audio_token_cost', 'cache_read_input_image_token_cost', 'cache_read_input_token_cost_ultrafast', 'cache_read_input_token_cost_batches', 'cache_read_input_token_cost_above_272k_tokens_batches', 'cache_creation_input_token_cost_batches', 'cache_creation_input_token_cost_above_200k_tokens_batches', 'cache_creation_input_token_cost_above_272k_tokens_batches', 'off_peak_pricing', 'input_cost_per_audio_token_batches', 'input_cost_per_image_token_batches', 'input_cost_per_video_token_batches', 'input_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_ultrafast', 'regional_endpoint_uplift_multiplier', 'output_cost_per_pixel', 'output_cost_per_second_480p', 'output_cost_per_second_720p', 'output_cost_per_second_768p', 'output_cost_per_second_2k', 'output_cost_per_second_4k', 'output_cost_per_image_512', 'output_cost_per_image_1024', 'output_cost_per_image_1536', 'ocr_cost_per_page_batches', 'annotation_cost_per_page_batches', 'google_maps_grounding_cost_per_query' on TypedDict class 'ModelInfo' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'langfuse_environment', 'langfuse_span_scope', 'arize_success_sampling_rate', 'arize_error_sampling_rate' on TypedDict class 'StandardCallbackDynamicParams' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'probabilities', 'threshold', 'predicted_tier', 'request_type' on TypedDict class 'StandardLoggingHeuristicV2Forecast' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/test_metadata.py::test_native_streaming_hook_cannot_prove_usage_presence[openai-ok]
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'classifier_probabilities', 'classifier_confidence', 'heuristic_v2_forecast', 'classifier_calibrated_p_solve', 'classifier_calibration_version', 'classifier_efficient_p_solve', 'classifier_capable_p_solve', 'classifier_calibrated_efficient_p_solve', 'classifier_calibrated_capable_p_solve', 'classifier_max_quality_gap', 'classifier_prompt_version' on TypedDict class 'StandardLoggingRoutingDecision' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+92 passed, 33 warnings, 19 subtests passed in 18.80s

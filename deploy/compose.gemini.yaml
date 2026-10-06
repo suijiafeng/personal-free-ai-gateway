@@ -1,0 +1,7 @@
+# Add only if Gemini account, model, privacy and free-only conditions are approved.
+services:
+  gateway:
+    secrets: [gemini_api_key]
+secrets:
+  gemini_api_key:
+    file: ${GEMINI_API_KEY_FILE:?Set the reviewed absolute secret-file path, never the key value}

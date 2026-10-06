@@ -1,0 +1,44 @@
+{
+  "url": "https://security.debian.org/debian-security/dists/bookworm-security/main/binary-arm64/Packages.xz",
+  "response_sha256": "23548ae7916afa2d09997f76069834202c11dc41db86e77de6c4e58231f1465d",
+  "packages": [
+    {
+      "Package": "squid",
+      "Version": "5.7-2+deb12u6",
+      "Installed-Size": "9511",
+      "Maintainer": "Luigi Gangitano <luigi@debian.org>",
+      "Architecture": "arm64",
+      "Depends": "libc6 (>= 2.34), libcap2 (>= 1:2.10), libcom-err2 (>= 1.43.9), libcrypt1 (>= 1:4.1.0), libecap3 (>= 1.0.1), libgcc-s1 (>= 3.0), libgnutls30 (>= 3.7.5), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.10+dfsg~), libldap-2.5-0 (>= 2.5.4), libltdl7 (>= 2.4.7), libnetfilter-conntrack3 (>= 1.0.1), libnettle8, libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.28+dfsg), libstdc++6 (>= 11), libsystemd0, libtdb1 (>= 1.2.7+git20101214), netbase, logrotate (>= 3.5.4-1), squid-common (>= 5.7-2+deb12u6), lsb-base, libdbi-perl",
+      "Suggests": "squidclient, squid-cgi, squid-purge, resolvconf (>= 0.40), smbclient, ufw, winbind, apparmor",
+      "Conflicts": "squid-openssl",
+      "Description": "Full featured Web Proxy cache (HTTP proxy GnuTLS flavour)",
+      "Homepage": "http://www.squid-cache.org",
+      "Description-md5": "b87c39c34d2257909d3430ecc70c8bfb",
+      "Pre-Depends": "init-system-helpers (>= 1.54~), adduser",
+      "Recommends": "libcap2-bin, ca-certificates",
+      "Section": "web",
+      "Priority": "optional",
+      "Filename": "pool/updates/main/s/squid/squid_5.7-2+deb12u6_arm64.deb",
+      "Size": "2384060",
+      "SHA256": "949dd852bca7dcb06442cf5c4115e79e346b415d4f88248f8a94ebe807113426"
+    },
+    {
+      "Package": "squid-common",
+      "Source": "squid",
+      "Version": "5.7-2+deb12u6",
+      "Installed-Size": "475",
+      "Maintainer": "Luigi Gangitano <luigi@debian.org>",
+      "Architecture": "all",
+      "Depends": "squid-langpack (>= 20110214-1)",
+      "Description": "Full featured Web Proxy cache (HTTP proxy) - common files",
+      "Homepage": "http://www.squid-cache.org",
+      "Description-md5": "43efb35ce395950e104ddfef1cb50d1c",
+      "Multi-Arch": "foreign",
+      "Section": "web",
+      "Priority": "optional",
+      "Filename": "pool/updates/main/s/squid/squid-common_5.7-2+deb12u6_all.deb",
+      "Size": "315212",
+      "SHA256": "6d390ae350a3a90fda792a0fd8e026e14a05f9f3485535925e693a2cdcc60f38"
+    }
+  ]
+}

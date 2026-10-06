@@ -1,0 +1,1133 @@
+The files belonging to this database system will be owned by user "agent".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+creating directory /tmp/gateway-disposable-postgres-0vmzxmh9/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... Asia/Tokyo
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    /workspace/shared/.gateway-runtime/pgroot/usr/lib/postgresql/17/bin/pg_ctl -D /tmp/gateway-disposable-postgres-0vmzxmh9/data -l logfile start
+
+waiting for server to start.... done
+server started
+Prisma schema loaded from ../personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/proxy/schema.prisma
+Warning: The binaryTargets option is not officially supported by Prisma Client Python.
+
+✔ Generated Prisma Client Python (v0.15.0) to ./../personal-free-ai-gateway/.venv/lib/python3.12/site-packages/prisma in 1.24s
+
+Prisma schema loaded from ../personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm_proxy_extras/schema.prisma
+Datasource "client": PostgreSQL database "gateway_test", schema "public" at "127.0.0.1:42755"
+
+189 migrations found in prisma/migrations
+
+Applying migration `20250326162113_baseline`
+Applying migration `20250326171002_add_daily_user_table`
+Applying migration `20250327180120_add_api_requests_to_daily_user_table`
+Applying migration `20250329084805_new_cron_job_table`
+Applying migration `20250331215456_track_success_and_failed_requests_daily_agg_table`
+Applying migration `20250411215431_add_managed_file_table`
+Applying migration `20250412081753_team_member_permissions`
+Applying migration `20250415151647_add_cache_read_write_tokens_daily_spend_transactions`
+Applying migration `20250415191926_add_daily_team_table`
+Applying migration `20250416115320_add_tag_table_to_db`
+Applying migration `20250416151339_drop_tag_uniqueness_requirement`
+Applying migration `20250416185146_add_allowed_routes_litellm_verification_token`
+Applying migration `20250425182129_add_session_id`
+Applying migration `20250430193429_add_managed_vector_stores`
+Applying migration `20250507161526_add_mcp_table_to_db`
+Applying migration `20250507161527_add_health_check_fields_to_mcp_servers`
+Applying migration `20250507184818_add_mcp_key_team_permission_mgmt`
+Applying migration `20250508072103_add_status_to_spendlogs`
+Applying migration `20250509141545_use_big_int_for_daily_spend_tables`
+Applying migration `20250510142544_add_session_id_index_spend_logs`
+Applying migration `20250514142245_add_guardrails_table`
+Applying migration `20250522223020_managed_object_table`
+Applying migration `20250526154401_allow_null_entity_id`
+Applying migration `20250528185438_add_vector_stores_to_object_permissions`
+Applying migration `20250603210143_cascade_budget_changes`
+Applying migration `20250618225828_add_health_check_table`
+Applying migration `20250625145206_cascade_budget_and_loosen_managed_file_json`
+Applying migration `20250625213625_add_status_to_managed_object_table`
+Applying migration `20250707212517_add_mcp_info_column_mcp_servers`
+Applying migration `20250707230009_add_mcp_namespaced_tool_name`
+Applying migration `20250711220620_add_stdio_mcp`
+Applying migration `20250718125714_add_litellm_params_to_vector_stores`
+Applying migration `20250802162330_prompt_table`
+Applying migration `20250806095134_rename_alias_to_server_name_mcp_table`
+Applying migration `20250918083359_drop_spec_version_column_from_mcp_table`
+Applying migration `20250926194702_unnamed_migration`
+Applying migration `20251003165142_add_allowed_tools_to_mcp`
+Applying migration `20251003190954_extra_headers_to_mcp_table`
+Applying migration `20251006143948_add_mcp_tool_permissions`
+Applying migration `20251011084309_add_tag_table`
+Applying migration `20251023141814_add_search_tool_table`
+Applying migration `20251031181430_add_cache_config_table`
+Applying migration `20251101131415_add_managed_vector_store_index_table`
+Applying migration `20251103072422_add_static_headers`
+Applying migration `20251104220043_add_credentials_to_mcp_servers`
+Applying migration `20251113000000_add_project_table`
+Applying migration `20251113000001_add_project_fields`
+Applying migration `20251114173537_add_request_id_to_daily_tag_spend`
+Applying migration `20251114180624_Add_org_usage_table`
+Applying migration `20251114182247_agents_table`
+Applying migration `20251119131227_add_prompt_versioning`
+Applying migration `20251122125322_Add organization_id to spend logs`
+Applying migration `20251204124859_add_end_user_spend_table`
+Applying migration `20251204142718_add_agent_permissions`
+Applying migration `20251209112246_add_ui_settings_table`
+Applying migration `20251210125210_add_storage_backend_to_managed_files`
+Applying migration `20251210205007_add_daily_agent_spend_table`
+Applying migration `20251211100212_schema_sync`
+Applying migration `20251219110931_add_deleted_keys_and_deleted_teams_tables`
+Applying migration `20251220144550_schema_update`
+Applying migration `20260102131258_add_metadata_urls_to_mcp_servers`
+Applying migration `20260105151539_add_allow_all_keys_to_mcp_servers`
+Applying migration `20260106155622_add_endpoint_to_daily_activity_tables`
+Applying migration `20260107111013_add_router_settings_to_keys_teams`
+Applying migration `20260108_add_user_email_lower_idx`
+Applying migration `20260116142756_update_deleted_keys_teams_table_routing_settings`
+Applying migration `20260123131407_add_policy_tables_and_policies_field`
+Applying migration `20260131150814_add_team_user_to_vector_stores`
+Applying migration `20260203120000_add_deprecated_verification_token_table`
+Applying migration `20260205091235_allow_team_guardrail_config`
+Applying migration `20260205144610_add_soft_budget_to_team_table`
+Applying migration `20260207093506_add_available_on_public_internet_to_mcp_servers`
+Applying migration `20260207110613_add_soft_budget_to_deleted_teams_table`
+Applying migration `20260209085821_add_verificationtoken_indexes`
+Applying migration `20260212103349_adjust_tags_policy_table`
+Applying migration `20260212143306_add_access_group_table`
+Applying migration `20260213105436_add_managed_vector_store_table`
+Applying migration `20260213170952_access_group_change_to_model_name`
+Applying migration `20260214094754_schema_sync`
+Applying migration `20260214163027_add_pipeline_to_policy_table`
+Applying migration `20260214185341_object_permissions_for_end_users`
+Applying migration `20260218231534_add_last_active_to_key_table`
+Applying migration `20260219105005_add_project_id_to_deleted_keys`
+Applying migration `20260219181415_baseline_diff`
+Applying migration `20260220124742_add_spec_path_to_mcp_servers`
+Applying migration `20260220153844_add_composite_index_aggregate_tables`
+Applying migration `20260221000000_ensure_project_id_verification_token`
+Applying migration `20260221183800_add_policy_versioning`
+Applying migration `20260222000000_add_batch_processed_to_managed_object_table`
+Applying migration `20260224201417_spend_logs_request_duration`
+Applying migration `20260224203854_add_agent_object_permissions_table`
+Applying migration `20260226000000_add_blocked_tools_to_object_permission`
+Applying migration `20260226120000_add_spend_log_tool_index`
+Applying migration `20260226202727_add_agent_id_to_delete_keys`
+Applying migration `20260228000000_add_claude_code_plugin_table`
+Applying migration `20260228100000_add_spend_logs_composite_index`
+Applying migration `20260228110000_mcp_default_public_internet_true`
+Applying migration `20260228170127_support_team_based_guardrails`
+Applying migration `20260303000000_update_tool_table_policies`
+Applying migration `20260304175016_add_spend_to_agent_table`
+Applying migration `20260305000000_add_agent_headers`
+Applying migration `20260305000000_add_rate_limits_to_agents`
+Applying migration `20260306175056_add_configs_override_table`
+Applying migration `20260306233848_schema_sync`
+Applying migration `20260309000000_add_mcp_approval_status`
+Applying migration `20260309000001_add_mcp_source_url`
+Applying migration `20260312124619_schema_sync`
+Applying migration `20260318140652_add_index_to_team_table`
+Applying migration `20260319000000_restore_mcp_approval_fields`
+Applying migration `20260321000000_add_mcp_toolsets`
+Applying migration `20260331000000_add_prompt_environment_and_created_by`
+Applying migration `20260401000000_add_budget_limits`
+Applying migration `20260401000000_add_team_member_model_scope`
+Applying migration `20260414140000_add_mcp_server_instructions`
+Applying migration `20260415120000_health_check_latest_per_model_index`
+Applying migration `20260418000000_add_adaptive_router_tables`
+Applying migration `20260421120000_add_memory_table`
+Applying migration `20260421135425_add_team_membership_total_spend`
+Applying migration `20260429120000_search_tools_on_object_permission`
+Applying migration `20260429161855_workflow_runs_tables`
+Applying migration `20260501195714_managed_resource_team_owner`
+Applying migration `20260513120000_add_delegate_auth_to_upstream_to_mcp_servers`
+Applying migration `20260514120000_add_blocked_to_proxy_model_table`
+Applying migration `20260520120000_add_mcp_env_vars`
+Applying migration `20260526120000_add_oauth_passthrough_to_mcp_servers`
+Applying migration `20260604120000_add_oauth2_flow_to_mcp_servers`
+Applying migration `20260605182307_add_timeout_to_mcp_server_table`
+Applying migration `20260626120000_add_mcp_tool_search_enabled`
+Applying migration `20260629000000_add_max_concurrent_requests_to_mcp_server_table`
+Applying migration `20260630120000_add_token_exchange_to_mcp_servers`
+Applying migration `20260630190000_add_budget_fallbacks_to_litellm_verification_token`
+Applying migration `20260703120000_add_token_exchange_profile_to_mcp_servers`
+Applying migration `20260710000000_add_dcr_bridge_to_mcp_server_table`
+Applying migration `20260713010000_add_ptu_columns_to_daily_team_spend`
+Applying migration `20260713230852_add_key_type_to_litellm_verification_token`
+Applying migration `20260715000000_add_issuer_to_mcp_server_table`
+Applying migration `20260717000000_add_compression_saved_tokens`
+Applying migration `20260717000000_add_mcp_server_oauth_client_table`
+Applying migration `20260717000000_cascade_delete_jwt_key_mapping_on_token_delete`
+Applying migration `20260718000000_add_savings_spend`
+Applying migration `20260721000000_add_sso_identity_assertion`
+Applying migration `20260724000000_add_spend_log_tool_index_start_time_idx`
+Applying migration `20260725000000_add_daily_tool_spend`
+Applying migration `20260729000000_add_reload_tracking_to_litellm_config`
+Applying migration `20260730000000_add_api_key_and_request_tags_to_managed_object_table`
+Applying migration `20260731000000_add_autorouter_savings_spend`
+Applying migration `20260803000000_add_daily_gateway_requests`
+Applying migration `20260804162853_add_budget_window_spend_table`
+Applying migration `20260805000000_add_autorouter_session_rollup`
+Applying migration `20260807000000_add_autorouter_session_tier_turns`
+Applying migration `20260810000000_add_verificationtoken_settings_updated_at`
+Applying migration `20260811172448_add_shadow_eval`
+Applying migration `20260813180408_add_shadow_eval_direction`
+Applying migration `20260814000000_add_proxy_worker_heartbeat`
+Applying migration `20260817000000_shadow_eval_multi_key`
+Applying migration `20260817143646_add_daily_guardrail_usage_units`
+Applying migration `20260818000000_add_spend_log_timestamps`
+Applying migration `20260818224500_add_shadow_eval_stopped_by`
+Applying migration `20260819000000_shadow_eval_max_budget`
+Applying migration `20260823000000_add_spend_logs_api_key_starttime_index`
+Applying migration `20260824000000_add_gateway_injected_caching_savings_spend`
+Applying migration `20260828000000_shadow_eval_cost_comparison`
+Applying migration `20260829000000_add_model_access_group_budget_table`
+Applying migration `20260831000000_shadow_eval_typed_targets`
+Applying migration `20260831120000_add_litellm_call_id_spend_logs`
+Applying migration `20260831120001_spend_logs_litellm_call_id_index`
+Applying migration `20260901000000_shadow_eval_multi_router`
+Applying migration `20260901000001_add_guardrail_usage_units_cost`
+Applying migration `20260903230000_add_org_id_to_managed_object_table`
+Applying migration `20260904000000_shadow_eval_model_scope`
+Applying migration `20260905120000_add_per_server_oauth_discovery_to_mcp_servers`
+Applying migration `20260907000000_add_autorouter_classifier_cost`
+Applying migration `20260910000000_add_autorouter_session_baseline_models`
+Applying migration `20260910000000_skills_on_object_permission`
+Applying migration `20260913000000_add_tpd_limit`
+Applying migration `20260915000000_add_autorouter_savings_estimate_coverage`
+Applying migration `20260915000000_add_daily_global_spend`
+Applying migration `20260915000000_add_daily_response_time`
+Applying migration `20260915000000_scope_jwt_key_mapping_by_issuer`
+Applying migration `20260915010000_add_autorouter_baseline_state`
+Applying migration `20260916000000_add_key_total_spend`
+Applying migration `20260917000000_add_agent_access_group_ids`
+Applying migration `20260917000000_add_budget_temp_increase`
+Applying migration `20260917055603_add_policy_attachment_priority`
+Applying migration `20260918000000_add_managed_file_content_table`
+Applying migration `20260919000000_add_autorouter_user_session_rollup`
+Applying migration `20260920041500_add_policy_attachment_is_default`
+Applying migration `20260921000000_add_password_reset_columns`
+Applying migration `20260923000000_add_agent_kill_switch`
+
+The following migration(s) have been applied:
+
+migrations/
+  └─ 20250326162113_baseline/
+    └─ migration.sql
+  └─ 20250326171002_add_daily_user_table/
+    └─ migration.sql
+  └─ 20250327180120_add_api_requests_to_daily_user_table/
+    └─ migration.sql
+  └─ 20250329084805_new_cron_job_table/
+    └─ migration.sql
+  └─ 20250331215456_track_success_and_failed_requests_daily_agg_table/
+    └─ migration.sql
+  └─ 20250411215431_add_managed_file_table/
+    └─ migration.sql
+  └─ 20250412081753_team_member_permissions/
+    └─ migration.sql
+  └─ 20250415151647_add_cache_read_write_tokens_daily_spend_transactions/
+    └─ migration.sql
+  └─ 20250415191926_add_daily_team_table/
+    └─ migration.sql
+  └─ 20250416115320_add_tag_table_to_db/
+    └─ migration.sql
+  └─ 20250416151339_drop_tag_uniqueness_requirement/
+    └─ migration.sql
+  └─ 20250416185146_add_allowed_routes_litellm_verification_token/
+    └─ migration.sql
+  └─ 20250425182129_add_session_id/
+    └─ migration.sql
+  └─ 20250430193429_add_managed_vector_stores/
+    └─ migration.sql
+  └─ 20250507161526_add_mcp_table_to_db/
+    └─ migration.sql
+  └─ 20250507161527_add_health_check_fields_to_mcp_servers/
+    └─ migration.sql
+  └─ 20250507184818_add_mcp_key_team_permission_mgmt/
+    └─ migration.sql
+  └─ 20250508072103_add_status_to_spendlogs/
+    └─ migration.sql
+  └─ 20250509141545_use_big_int_for_daily_spend_tables/
+    └─ migration.sql
+  └─ 20250510142544_add_session_id_index_spend_logs/
+    └─ migration.sql
+  └─ 20250514142245_add_guardrails_table/
+    └─ migration.sql
+  └─ 20250522223020_managed_object_table/
+    └─ migration.sql
+  └─ 20250526154401_allow_null_entity_id/
+    └─ migration.sql
+  └─ 20250528185438_add_vector_stores_to_object_permissions/
+    └─ migration.sql
+  └─ 20250603210143_cascade_budget_changes/
+    └─ migration.sql
+  └─ 20250618225828_add_health_check_table/
+    └─ migration.sql
+  └─ 20250625145206_cascade_budget_and_loosen_managed_file_json/
+    └─ migration.sql
+  └─ 20250625213625_add_status_to_managed_object_table/
+    └─ migration.sql
+  └─ 20250707212517_add_mcp_info_column_mcp_servers/
+    └─ migration.sql
+  └─ 20250707230009_add_mcp_namespaced_tool_name/
+    └─ migration.sql
+  └─ 20250711220620_add_stdio_mcp/
+    └─ migration.sql
+  └─ 20250718125714_add_litellm_params_to_vector_stores/
+    └─ migration.sql
+  └─ 20250802162330_prompt_table/
+    └─ migration.sql
+  └─ 20250806095134_rename_alias_to_server_name_mcp_table/
+    └─ migration.sql
+  └─ 20250918083359_drop_spec_version_column_from_mcp_table/
+    └─ migration.sql
+  └─ 20250926194702_unnamed_migration/
+    └─ migration.sql
+  └─ 20251003165142_add_allowed_tools_to_mcp/
+    └─ migration.sql
+  └─ 20251003190954_extra_headers_to_mcp_table/
+    └─ migration.sql
+  └─ 20251006143948_add_mcp_tool_permissions/
+    └─ migration.sql
+  └─ 20251011084309_add_tag_table/
+    └─ migration.sql
+  └─ 20251023141814_add_search_tool_table/
+    └─ migration.sql
+  └─ 20251031181430_add_cache_config_table/
+    └─ migration.sql
+  └─ 20251101131415_add_managed_vector_store_index_table/
+    └─ migration.sql
+  └─ 20251103072422_add_static_headers/
+    └─ migration.sql
+  └─ 20251104220043_add_credentials_to_mcp_servers/
+    └─ migration.sql
+  └─ 20251113000000_add_project_table/
+    └─ migration.sql
+  └─ 20251113000001_add_project_fields/
+    └─ migration.sql
+  └─ 20251114173537_add_request_id_to_daily_tag_spend/
+    └─ migration.sql
+  └─ 20251114180624_Add_org_usage_table/
+    └─ migration.sql
+  └─ 20251114182247_agents_table/
+    └─ migration.sql
+  └─ 20251119131227_add_prompt_versioning/
+    └─ migration.sql
+  └─ 20251122125322_Add organization_id to spend logs/
+    └─ migration.sql
+  └─ 20251204124859_add_end_user_spend_table/
+    └─ migration.sql
+  └─ 20251204142718_add_agent_permissions/
+    └─ migration.sql
+  └─ 20251209112246_add_ui_settings_table/
+    └─ migration.sql
+  └─ 20251210125210_add_storage_backend_to_managed_files/
+    └─ migration.sql
+  └─ 20251210205007_add_daily_agent_spend_table/
+    └─ migration.sql
+  └─ 20251211100212_schema_sync/
+    └─ migration.sql
+  └─ 20251219110931_add_deleted_keys_and_deleted_teams_tables/
+    └─ migration.sql
+  └─ 20251220144550_schema_update/
+    └─ migration.sql
+  └─ 20260102131258_add_metadata_urls_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260105151539_add_allow_all_keys_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260106155622_add_endpoint_to_daily_activity_tables/
+    └─ migration.sql
+  └─ 20260107111013_add_router_settings_to_keys_teams/
+    └─ migration.sql
+  └─ 20260108_add_user_email_lower_idx/
+    └─ migration.sql
+  └─ 20260116142756_update_deleted_keys_teams_table_routing_settings/
+    └─ migration.sql
+  └─ 20260123131407_add_policy_tables_and_policies_field/
+    └─ migration.sql
+  └─ 20260131150814_add_team_user_to_vector_stores/
+    └─ migration.sql
+  └─ 20260203120000_add_deprecated_verification_token_table/
+    └─ migration.sql
+  └─ 20260205091235_allow_team_guardrail_config/
+    └─ migration.sql
+  └─ 20260205144610_add_soft_budget_to_team_table/
+    └─ migration.sql
+  └─ 20260207093506_add_available_on_public_internet_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260207110613_add_soft_budget_to_deleted_teams_table/
+    └─ migration.sql
+  └─ 20260209085821_add_verificationtoken_indexes/
+    └─ migration.sql
+  └─ 20260212103349_adjust_tags_policy_table/
+    └─ migration.sql
+  └─ 20260212143306_add_access_group_table/
+    └─ migration.sql
+  └─ 20260213105436_add_managed_vector_store_table/
+    └─ migration.sql
+  └─ 20260213170952_access_group_change_to_model_name/
+    └─ migration.sql
+  └─ 20260214094754_schema_sync/
+    └─ migration.sql
+  └─ 20260214163027_add_pipeline_to_policy_table/
+    └─ migration.sql
+  └─ 20260214185341_object_permissions_for_end_users/
+    └─ migration.sql
+  └─ 20260218231534_add_last_active_to_key_table/
+    └─ migration.sql
+  └─ 20260219105005_add_project_id_to_deleted_keys/
+    └─ migration.sql
+  └─ 20260219181415_baseline_diff/
+    └─ migration.sql
+  └─ 20260220124742_add_spec_path_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260220153844_add_composite_index_aggregate_tables/
+    └─ migration.sql
+  └─ 20260221000000_ensure_project_id_verification_token/
+    └─ migration.sql
+  └─ 20260221183800_add_policy_versioning/
+    └─ migration.sql
+  └─ 20260222000000_add_batch_processed_to_managed_object_table/
+    └─ migration.sql
+  └─ 20260224201417_spend_logs_request_duration/
+    └─ migration.sql
+  └─ 20260224203854_add_agent_object_permissions_table/
+    └─ migration.sql
+  └─ 20260226000000_add_blocked_tools_to_object_permission/
+    └─ migration.sql
+  └─ 20260226120000_add_spend_log_tool_index/
+    └─ migration.sql
+  └─ 20260226202727_add_agent_id_to_delete_keys/
+    └─ migration.sql
+  └─ 20260228000000_add_claude_code_plugin_table/
+    └─ migration.sql
+  └─ 20260228100000_add_spend_logs_composite_index/
+    └─ migration.sql
+  └─ 20260228110000_mcp_default_public_internet_true/
+    └─ migration.sql
+  └─ 20260228170127_support_team_based_guardrails/
+    └─ migration.sql
+  └─ 20260303000000_update_tool_table_policies/
+    └─ migration.sql
+  └─ 20260304175016_add_spend_to_agent_table/
+    └─ migration.sql
+  └─ 20260305000000_add_agent_headers/
+    └─ migration.sql
+  └─ 20260305000000_add_rate_limits_to_agents/
+    └─ migration.sql
+  └─ 20260306175056_add_configs_override_table/
+    └─ migration.sql
+  └─ 20260306233848_schema_sync/
+    └─ migration.sql
+  └─ 20260309000000_add_mcp_approval_status/
+    └─ migration.sql
+  └─ 20260309000001_add_mcp_source_url/
+    └─ migration.sql
+  └─ 20260312124619_schema_sync/
+    └─ migration.sql
+  └─ 20260318140652_add_index_to_team_table/
+    └─ migration.sql
+  └─ 20260319000000_restore_mcp_approval_fields/
+    └─ migration.sql
+  └─ 20260321000000_add_mcp_toolsets/
+    └─ migration.sql
+  └─ 20260331000000_add_prompt_environment_and_created_by/
+    └─ migration.sql
+  └─ 20260401000000_add_budget_limits/
+    └─ migration.sql
+  └─ 20260401000000_add_team_member_model_scope/
+    └─ migration.sql
+  └─ 20260414140000_add_mcp_server_instructions/
+    └─ migration.sql
+  └─ 20260415120000_health_check_latest_per_model_index/
+    └─ migration.sql
+  └─ 20260418000000_add_adaptive_router_tables/
+    └─ migration.sql
+  └─ 20260421120000_add_memory_table/
+    └─ migration.sql
+  └─ 20260421135425_add_team_membership_total_spend/
+    └─ migration.sql
+  └─ 20260429120000_search_tools_on_object_permission/
+    └─ migration.sql
+  └─ 20260429161855_workflow_runs_tables/
+    └─ migration.sql
+  └─ 20260501195714_managed_resource_team_owner/
+    └─ migration.sql
+  └─ 20260513120000_add_delegate_auth_to_upstream_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260514120000_add_blocked_to_proxy_model_table/
+    └─ migration.sql
+  └─ 20260520120000_add_mcp_env_vars/
+    └─ migration.sql
+  └─ 20260526120000_add_oauth_passthrough_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260604120000_add_oauth2_flow_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260605182307_add_timeout_to_mcp_server_table/
+    └─ migration.sql
+  └─ 20260626120000_add_mcp_tool_search_enabled/
+    └─ migration.sql
+  └─ 20260629000000_add_max_concurrent_requests_to_mcp_server_table/
+    └─ migration.sql
+  └─ 20260630120000_add_token_exchange_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260630190000_add_budget_fallbacks_to_litellm_verification_token/
+    └─ migration.sql
+  └─ 20260703120000_add_token_exchange_profile_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260710000000_add_dcr_bridge_to_mcp_server_table/
+    └─ migration.sql
+  └─ 20260713010000_add_ptu_columns_to_daily_team_spend/
+    └─ migration.sql
+  └─ 20260713230852_add_key_type_to_litellm_verification_token/
+    └─ migration.sql
+  └─ 20260715000000_add_issuer_to_mcp_server_table/
+    └─ migration.sql
+  └─ 20260717000000_add_compression_saved_tokens/
+    └─ migration.sql
+  └─ 20260717000000_add_mcp_server_oauth_client_table/
+    └─ migration.sql
+  └─ 20260717000000_cascade_delete_jwt_key_mapping_on_token_delete/
+    └─ migration.sql
+  └─ 20260718000000_add_savings_spend/
+    └─ migration.sql
+  └─ 20260721000000_add_sso_identity_assertion/
+    └─ migration.sql
+  └─ 20260724000000_add_spend_log_tool_index_start_time_idx/
+    └─ migration.sql
+  └─ 20260725000000_add_daily_tool_spend/
+    └─ migration.sql
+  └─ 20260729000000_add_reload_tracking_to_litellm_config/
+    └─ migration.sql
+  └─ 20260730000000_add_api_key_and_request_tags_to_managed_object_table/
+    └─ migration.sql
+  └─ 20260731000000_add_autorouter_savings_spend/
+    └─ migration.sql
+  └─ 20260803000000_add_daily_gateway_requests/
+    └─ migration.sql
+  └─ 20260804162853_add_budget_window_spend_table/
+    └─ migration.sql
+  └─ 20260805000000_add_autorouter_session_rollup/
+    └─ migration.sql
+  └─ 20260807000000_add_autorouter_session_tier_turns/
+    └─ migration.sql
+  └─ 20260810000000_add_verificationtoken_settings_updated_at/
+    └─ migration.sql
+  └─ 20260811172448_add_shadow_eval/
+    └─ migration.sql
+  └─ 20260813180408_add_shadow_eval_direction/
+    └─ migration.sql
+  └─ 20260814000000_add_proxy_worker_heartbeat/
+    └─ migration.sql
+  └─ 20260817000000_shadow_eval_multi_key/
+    └─ migration.sql
+  └─ 20260817143646_add_daily_guardrail_usage_units/
+    └─ migration.sql
+  └─ 20260818000000_add_spend_log_timestamps/
+    └─ migration.sql
+  └─ 20260818224500_add_shadow_eval_stopped_by/
+    └─ migration.sql
+  └─ 20260819000000_shadow_eval_max_budget/
+    └─ migration.sql
+  └─ 20260823000000_add_spend_logs_api_key_starttime_index/
+    └─ migration.sql
+  └─ 20260824000000_add_gateway_injected_caching_savings_spend/
+    └─ migration.sql
+  └─ 20260828000000_shadow_eval_cost_comparison/
+    └─ migration.sql
+  └─ 20260829000000_add_model_access_group_budget_table/
+    └─ migration.sql
+  └─ 20260831000000_shadow_eval_typed_targets/
+    └─ migration.sql
+  └─ 20260831120000_add_litellm_call_id_spend_logs/
+    └─ migration.sql
+  └─ 20260831120001_spend_logs_litellm_call_id_index/
+    └─ migration.sql
+  └─ 20260901000000_shadow_eval_multi_router/
+    └─ migration.sql
+  └─ 20260901000001_add_guardrail_usage_units_cost/
+    └─ migration.sql
+  └─ 20260903230000_add_org_id_to_managed_object_table/
+    └─ migration.sql
+  └─ 20260904000000_shadow_eval_model_scope/
+    └─ migration.sql
+  └─ 20260905120000_add_per_server_oauth_discovery_to_mcp_servers/
+    └─ migration.sql
+  └─ 20260907000000_add_autorouter_classifier_cost/
+    └─ migration.sql
+  └─ 20260910000000_add_autorouter_session_baseline_models/
+    └─ migration.sql
+  └─ 20260910000000_skills_on_object_permission/
+    └─ migration.sql
+  └─ 20260913000000_add_tpd_limit/
+    └─ migration.sql
+  └─ 20260915000000_add_autorouter_savings_estimate_coverage/
+    └─ migration.sql
+  └─ 20260915000000_add_daily_global_spend/
+    └─ migration.sql
+  └─ 20260915000000_add_daily_response_time/
+    └─ migration.sql
+  └─ 20260915000000_scope_jwt_key_mapping_by_issuer/
+    └─ migration.sql
+  └─ 20260915010000_add_autorouter_baseline_state/
+    └─ migration.sql
+  └─ 20260916000000_add_key_total_spend/
+    └─ migration.sql
+  └─ 20260917000000_add_agent_access_group_ids/
+    └─ migration.sql
+  └─ 20260917000000_add_budget_temp_increase/
+    └─ migration.sql
+  └─ 20260917055603_add_policy_attachment_priority/
+    └─ migration.sql
+  └─ 20260918000000_add_managed_file_content_table/
+    └─ migration.sql
+  └─ 20260919000000_add_autorouter_user_session_rollup/
+    └─ migration.sql
+  └─ 20260920041500_add_policy_attachment_is_default/
+    └─ migration.sql
+  └─ 20260921000000_add_password_reset_columns/
+    └─ migration.sql
+  └─ 20260923000000_add_agent_kill_switch/
+    └─ migration.sql
+      
+All migrations have been successfully applied.
+----------------------------------------------------------------------
+Ran 8 tests in 0.032s
+
+OK
+...................................................................... [  9%]
+...............................FF....................F.............F.F.. [ 19%]
+FFF.FFF..FF...F..F.FF.F.FFF.F................................. [ 28%]
+........................................................................ [ 37%]
+............................................................................................................................... [ 55%]
+........................................................................ [ 65%]
+........................................................................ [ 75%]
+........................................................................ [ 85%]
+...................................................................................................... [ 99%]
+.......                                                                  [100%]
+=================================== FAILURES ===================================
+_________ test_native_total_deadline_bounds_two_slow_upstream_attempts _________
+
+native_boundary = <function native_boundary.<locals>.start at 0x7fecc9013600>
+
+    def test_native_total_deadline_bounds_two_slow_upstream_attempts(native_boundary):
+        with native_boundary(total_timeout=1.2, first_event_timeout=.8) as (proxy, upstream, key, _):
+            for model in ("mock-primary", "mock-secondary"):
+                upstream.set_behavior(model, "timeout", timeout_seconds=10)
+            started = time.monotonic()
+            response = proxy.generate(key)
+            elapsed = time.monotonic() - started
+>           assert response.status_code == 504
+E           assert 503 == 504
+E            +  where 503 = <Response [503 Service Unavailable]>.status_code
+
+tests/integration/test_proxy_boundaries.py:136: AssertionError
+____ test_native_total_deadline_ends_active_sse_without_success_or_fallback ____
+
+native_boundary = <function native_boundary.<locals>.start at 0x7fecc8701ee0>
+
+    def test_native_total_deadline_ends_active_sse_without_success_or_fallback(native_boundary):
+        with native_boundary(total_timeout=.65, first_event_timeout=.6,
+                             stream_idle_timeout=.6) as (proxy, upstream, key, _):
+            # Every chunk arrives inside the idle budget. The total budget alone
+            # interrupts this stream before its genuine terminal chunk.
+            upstream.set_behavior("mock-primary", "slow_stream", chunk_delay=.2)
+            started = time.monotonic()
+            response = proxy.request("POST", "/v1/chat/completions", key, {
+                "model": "general-free", "messages": HISTORY, "stream": True,
+            })
+            elapsed = time.monotonic() - started
+>           assert response.status_code == 200
+E           assert 504 == 200
+E            +  where 504 = <Response [504 Gateway Timeout]>.status_code
+
+tests/integration/test_proxy_boundaries.py:160: AssertionError
+_______ NativeProxyPostgresTests.test_proxy_concurrency_limit_is_bounded _______
+
+self = <test_proxy_postgres.NativeProxyPostgresTests testMethod=test_proxy_concurrency_limit_is_bounded>
+
+    def test_proxy_concurrency_limit_is_bounded(self):
+        self.assertEqual(self.invoke().status_code,200)  # establish healthy quota pool
+        # The response body can arrive before audit finalization releases its slot.
+        for _ in range(300):
+            if self.app.active_requests==0 and self.upstream.active_requests==0:
+                break
+            time.sleep(.01)
+        self.assertEqual(self.app.active_requests,0)
+        self.upstream.reset()
+        release=threading.Event()
+        self.upstream.set_behavior('mock-primary','ok',release_event=release)
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            work=[executor.submit(self.invoke) for _ in range(2)]
+            try:
+                for _ in range(100):
+                    if self.upstream.active_requests==2:
+                        break
+                    if any(f.done() for f in work):
+                        break
+                    time.sleep(.005)
+                # Both actual upstream requests are held until after the third check.
+>               self.assertEqual(self.upstream.active_requests,2)
+E               AssertionError: 1 != 2
+
+tests/integration/test_proxy_postgres.py:194: AssertionError
+_ NativeSDKProxyPostgresTests.test_body_overrides_unknown_alias_and_unsupported_fields _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_body_overrides_unknown_alias_and_unsupported_fields>
+
+    def test_body_overrides_unknown_alias_and_unsupported_fields(self):
+        for k,v in {'api_base':'https://not-allowed.invalid','api_key':'SYNTHETIC_SECRET_SENTINEL','fallbacks':['paid'],'drop_params':True,'temperature':.5,'tools':[],'metadata':{}}.items():
+>           r=self.invoke(**{k:v});self.assertEqual(r.status_code,400,(k,r.text))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: 429 != 400 : ('drop_params', '{"error": {"message": "Local request concurrency limit reached.", "type": "rate_limited", "param": null, "code": "rate_limited"}}')
+
+tests/integration/test_proxy_postgres.py:132: AssertionError
+_ NativeSDKProxyPostgresTests.test_database_unreachable_rejects_even_cached_valid_key _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_database_unreachable_rejects_even_cached_valid_key>
+
+    def test_database_unreachable_rejects_even_cached_valid_key(self):
+>       self.assertEqual(self.invoke().status_code,200)
+E       AssertionError: 503 != 200
+
+tests/integration/test_proxy_postgres.py:265: AssertionError
+_ NativeSDKProxyPostgresTests.test_measured_usage_is_distinct_from_missing_and_stream_unknown _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_measured_usage_is_distinct_from_missing_and_stream_unknown>
+
+    def test_measured_usage_is_distinct_from_missing_and_stream_unknown(self):
+>       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:372: AssertionError
+_____ NativeSDKProxyPostgresTests.test_native_fallback_and_sanitized_trace _____
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_native_fallback_and_sanitized_trace>
+
+    def test_native_fallback_and_sanitized_trace(self):
+        self.upstream.set_behavior('mock-primary','http_429',retry_after='1')
+>       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:138: AssertionError
+_ NativeSDKProxyPostgresTests.test_native_restricted_key_nonstream_and_models __
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_native_restricted_key_nonstream_and_models>
+
+    def test_native_restricted_key_nonstream_and_models(self):
+>       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:113: AssertionError
+_ NativeSDKProxyPostgresTests.test_nonstream_refusal_and_length_keep_semantics _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_nonstream_refusal_and_length_keep_semantics>
+
+    def test_nonstream_refusal_and_length_keep_semantics(self):
+        self.upstream.set_behavior('mock-primary','refusal')
+>       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:339: AssertionError
+_ NativeSDKProxyPostgresTests.test_observed_quota_persists_and_blocks_only_its_scope _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_observed_quota_persists_and_blocks_only_its_scope>
+
+    def test_observed_quota_persists_and_blocks_only_its_scope(self):
+        self.upstream.set_behavior('mock-primary','ok',headers={
+            'x-ratelimit-limit-requests':'10','x-ratelimit-remaining-requests':'0',
+            'x-ratelimit-reset-requests':'60s','authorization':'SYNTHETIC_HEADER_SECRET'})
+>       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:351: AssertionError
+_ NativeSDKProxyPostgresTests.test_persisted_pool_cooldown_restores_and_unknown_stays_unknown _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_persisted_pool_cooldown_restores_and_unknown_stays_unknown>
+
+    def test_persisted_pool_cooldown_restores_and_unknown_stays_unknown(self):
+        self.upstream.set_behavior('mock-primary','http_429',retry_after='60')
+>       self.assertEqual(self.invoke().status_code,200)
+E       AssertionError: 503 != 200
+
+tests/integration/test_proxy_postgres.py:277: AssertionError
+_____ NativeSDKProxyPostgresTests.test_proxy_concurrency_limit_is_bounded ______
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_proxy_concurrency_limit_is_bounded>
+
+    def test_proxy_concurrency_limit_is_bounded(self):
+>       self.assertEqual(self.invoke().status_code,200)  # establish healthy quota pool
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 200
+
+tests/integration/test_proxy_postgres.py:174: AssertionError
+_ NativeSDKProxyPostgresTests.test_proxy_disconnect_releases_slot_and_does_not_retry _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_proxy_disconnect_releases_slot_and_does_not_retry>
+
+    def test_proxy_disconnect_releases_slot_and_does_not_retry(self):
+        self.upstream.set_behavior('mock-primary','slow_stream',chunk_delay=.7)
+        with self.http.stream('POST','/v1/chat/completions',headers={'Authorization':'Bearer '+self.key},json={
+                'model':'general-free','messages':[{'role':'user','content':'fixture'}],'stream':True}) as response:
+>           self.assertEqual(response.status_code,200)
+E           AssertionError: 502 != 200
+
+tests/integration/test_proxy_postgres.py:214: AssertionError
+___ NativeSDKProxyPostgresTests.test_sdk_after_text_failure_cannot_fallback ____
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_after_text_failure_cannot_fallback>
+
+    def test_sdk_after_text_failure_cannot_fallback(self):
+>       self._assert_post_event_failure('disconnect_after_content')
+
+tests/integration/test_sdk_proxy_postgres.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration/test_sdk_proxy_postgres.py:103: in _assert_post_event_failure
+    self.assertEqual(self.upstream.counts['mock-primary'],1)
+E   AssertionError: 0 != 1
+_ NativeSDKProxyPostgresTests.test_sdk_empty_and_terminal_refusal_are_valid (refusal=False) _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_empty_and_terminal_refusal_are_valid>
+
+    def test_sdk_empty_and_terminal_refusal_are_valid(self):
+        original=deepcopy(mock_upstream.STREAM_EVENTS)
+        for refusal in (None,'Synthetic terminal refusal.'):
+            with self.subTest(refusal=bool(refusal)):
+                terminal=deepcopy(original[-2])
+                terminal['choices'][0]['delta']={} if refusal is None else {'refusal':refusal}
+                events=[deepcopy(original[0]),terminal,deepcopy(original[-1])]
+                with patch.object(mock_upstream,'STREAM_EVENTS',events):
+                    response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:67: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_empty_and_terminal_refusal_are_valid (refusal=True) _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_empty_and_terminal_refusal_are_valid>
+
+    def test_sdk_empty_and_terminal_refusal_are_valid(self):
+        original=deepcopy(mock_upstream.STREAM_EVENTS)
+        for refusal in (None,'Synthetic terminal refusal.'):
+            with self.subTest(refusal=bool(refusal)):
+                terminal=deepcopy(original[-2])
+                terminal['choices'][0]['delta']={} if refusal is None else {'refusal':refusal}
+                events=[deepcopy(original[0]),terminal,deepcopy(original[-1])]
+                with patch.object(mock_upstream,'STREAM_EVENTS',events):
+                    response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:67: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_observed_stream_usage_and_unknown_are_distinct (behavior='ok') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_observed_stream_usage_and_unknown_are_distinct>
+
+    def test_sdk_observed_stream_usage_and_unknown_are_distinct(self):
+        for behavior,expected in (('ok',14),('zero_usage',0),('missing_usage',None),('partial_usage',None),('null_usage',None)):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:48: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_observed_stream_usage_and_unknown_are_distinct (behavior='zero_usage') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_observed_stream_usage_and_unknown_are_distinct>
+
+    def test_sdk_observed_stream_usage_and_unknown_are_distinct(self):
+        for behavior,expected in (('ok',14),('zero_usage',0),('missing_usage',None),('partial_usage',None),('null_usage',None)):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:48: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_observed_stream_usage_and_unknown_are_distinct (behavior='missing_usage') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_observed_stream_usage_and_unknown_are_distinct>
+
+    def test_sdk_observed_stream_usage_and_unknown_are_distinct(self):
+        for behavior,expected in (('ok',14),('zero_usage',0),('missing_usage',None),('partial_usage',None),('null_usage',None)):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:48: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_observed_stream_usage_and_unknown_are_distinct (behavior='partial_usage') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_observed_stream_usage_and_unknown_are_distinct>
+
+    def test_sdk_observed_stream_usage_and_unknown_are_distinct(self):
+        for behavior,expected in (('ok',14),('zero_usage',0),('missing_usage',None),('partial_usage',None),('null_usage',None)):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:48: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_observed_stream_usage_and_unknown_are_distinct (behavior='null_usage') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_observed_stream_usage_and_unknown_are_distinct>
+
+    def test_sdk_observed_stream_usage_and_unknown_are_distinct(self):
+        for behavior,expected in (('ok',14),('zero_usage',0),('missing_usage',None),('partial_usage',None),('null_usage',None)):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:48: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_pre_first_event_failure_has_one_bounded_fallback _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_pre_first_event_failure_has_one_bounded_fallback>
+
+    def test_sdk_pre_first_event_failure_has_one_bounded_fallback(self):
+        self.upstream.set_behavior('mock-primary','disconnect_before_role')
+        response=self.invoke(stream=True)
+>       self.assertEqual(response.status_code,200,response.text)
+E       AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:91: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_refusal_shapes_preserve_exact_semantics (behavior='refusal') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_refusal_shapes_preserve_exact_semantics>
+
+    def test_sdk_refusal_shapes_preserve_exact_semantics(self):
+        for behavior in ('refusal','refusal_after_content','refusal_with_content'):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                before=dict(self.upstream.counts)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:32: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_refusal_shapes_preserve_exact_semantics (behavior='refusal_after_content') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_refusal_shapes_preserve_exact_semantics>
+
+    def test_sdk_refusal_shapes_preserve_exact_semantics(self):
+        for behavior in ('refusal','refusal_after_content','refusal_with_content'):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                before=dict(self.upstream.counts)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:32: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_refusal_shapes_preserve_exact_semantics (behavior='refusal_with_content') _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_refusal_shapes_preserve_exact_semantics>
+
+    def test_sdk_refusal_shapes_preserve_exact_semantics(self):
+        for behavior in ('refusal','refusal_after_content','refusal_with_content'):
+            with self.subTest(behavior=behavior):
+                self.upstream.set_behavior('mock-primary',behavior)
+                before=dict(self.upstream.counts)
+                response=self.invoke(stream=True)
+>               self.assertEqual(response.status_code,200,response.text)
+E               AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_sdk_proxy_postgres.py:32: AssertionError
+____ NativeSDKProxyPostgresTests.test_sdk_role_only_failure_cannot_fallback ____
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_role_only_failure_cannot_fallback>
+
+    def test_sdk_role_only_failure_cannot_fallback(self):
+>       self._assert_post_event_failure('disconnect_after_role')
+
+tests/integration/test_sdk_proxy_postgres.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration/test_sdk_proxy_postgres.py:103: in _assert_post_event_failure
+    self.assertEqual(self.upstream.counts['mock-primary'],1)
+E   AssertionError: 0 != 1
+_ NativeSDKProxyPostgresTests.test_sdk_stream_headers_update_only_the_confirmed_quota_scope _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_stream_headers_update_only_the_confirmed_quota_scope>
+
+    def test_sdk_stream_headers_update_only_the_confirmed_quota_scope(self):
+        self.upstream.set_behavior('mock-primary','ok',headers={'x-ratelimit-remaining-requests':'0','x-ratelimit-reset-requests':'60s'})
+        response=self.invoke(stream=True)
+>       self.assertIn('data: [DONE]',response.text)
+E       AssertionError: 'data: [DONE]' not found in '{"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}'
+
+tests/integration/test_sdk_proxy_postgres.py:140: AssertionError
+_ NativeSDKProxyPostgresTests.test_sdk_trailing_transport_failure_never_sends_terminal _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_trailing_transport_failure_never_sends_terminal>
+
+    def test_sdk_trailing_transport_failure_never_sends_terminal(self):
+        original=deepcopy(mock_upstream.STREAM_EVENTS)
+        # Fixture disconnects after event index 2. Put the true upstream terminal
+        # there: the bridge must withhold it until SDK consumption finishes safely.
+        events=[original[0],original[2],original[-2],original[-1]]
+        self.upstream.set_behavior('mock-primary','disconnect_after_content')
+        with patch.object(mock_upstream,'STREAM_EVENTS',events):
+            response=self.invoke(stream=True)
+        self.assertNotIn('data: [DONE]',response.text)
+        self.assertNotIn('"finish_reason":"stop"',response.text.replace(' ',''))
+        self.assertEqual(self.upstream.counts['mock-secondary'],0)
+>       self.assertEqual(self._finished(response.headers['x-request-id'])[-1]['status'],'stream_interrupted')
+E       AssertionError: 'failed' != 'stream_interrupted'
+E       - failed
+E       + stream_interrupted
+
+tests/integration/test_sdk_proxy_postgres.py:86: AssertionError
+_ NativeSDKProxyPostgresTests.test_stream_normal_and_clean_eof_never_faked_success _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_stream_normal_and_clean_eof_never_faked_success>
+
+    def test_stream_normal_and_clean_eof_never_faked_success(self):
+>       r=self.invoke(stream=True);self.assertEqual(r.status_code,200,r.text)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 502 != 200 : {"error": {"message": "The upstream request could not be completed.", "type": "upstream_error", "param": null, "code": "upstream_error"}}
+
+tests/integration/test_proxy_postgres.py:148: AssertionError
+_ NativeSDKProxyPostgresTests.test_unaliased_keys_have_distinct_safe_audit_fingerprints _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_unaliased_keys_have_distinct_safe_audit_fingerprints>
+
+    def test_unaliased_keys_have_distinct_safe_audit_fingerprints(self):
+        keys=[self.create_key(None) for _ in range(2)]
+        fingerprints=[]
+        try:
+            for key in keys:
+                r=self.http.post('/v1/chat/completions',headers={'Authorization':'Bearer '+key},json={'model':'general-free','messages':[{'role':'user','content':'fixture'}]})
+>               self.assertEqual(r.status_code,200,r.text)
+E               AssertionError: 503 != 200 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:409: AssertionError
+_ NativeSDKProxyPostgresTests.test_unknown_reset_zero_is_locally_paused_not_unrestricted _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_unknown_reset_zero_is_locally_paused_not_unrestricted>
+
+    def test_unknown_reset_zero_is_locally_paused_not_unrestricted(self):
+        self.upstream.set_behavior('mock-primary','ok',headers={'x-ratelimit-remaining-requests':'0'})
+>       self.assertEqual(self.invoke().status_code,200)
+E       AssertionError: 503 != 200
+
+tests/integration/test_proxy_postgres.py:428: AssertionError
+_ NativeSDKProxyPostgresTests.test_upstream_auth_failure_is_502_not_consumer_401 _
+
+self = <test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_upstream_auth_failure_is_502_not_consumer_401>
+
+    def test_upstream_auth_failure_is_502_not_consumer_401(self):
+        self.upstream.set_behavior('mock-primary','http_401')
+>       r=self.invoke();self.assertEqual(r.status_code,502,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 503 != 502 : {"error": {"message": "No approved free candidate or required state is available.", "type": "no_eligible_free_model", "param": null, "code": "no_eligible_free_model"}}
+
+tests/integration/test_proxy_postgres.py:232: AssertionError
+=============================== warnings summary ===============================
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Item 'summary' on TypedDict class 'ChatCompletionReasoningItem' is using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'weekdays' on TypedDict class 'OffPeakWindow' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'hours_utc', 'windows', 'weekday_timezone', 'input_cost_per_token', 'output_cost_per_token', 'output_cost_per_reasoning_token', 'cache_read_input_token_cost', 'cache_creation_input_token_cost' on TypedDict class 'OffPeakPricing' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'supports_prompt_cache_breakpoint', 'supports_thinking_cache_preservation', 'supports_legacy_thinking', 'thinking_always_on', 'reasoning_effort_levels', 'default_reasoning_effort', 'supports_anthropic_thinking_payload', 'supports_anthropic_compaction', 'supported_audio_formats', 'vertex_ai_audio_api', 'input_cost_per_token_ultrafast', 'cache_creation_input_token_cost_ultrafast', 'cache_read_input_audio_token_cost', 'cache_read_input_image_token_cost', 'cache_read_input_token_cost_ultrafast', 'cache_read_input_token_cost_batches', 'cache_read_input_token_cost_above_272k_tokens_batches', 'cache_creation_input_token_cost_batches', 'cache_creation_input_token_cost_above_200k_tokens_batches', 'cache_creation_input_token_cost_above_272k_tokens_batches', 'off_peak_pricing', 'input_cost_per_audio_token_batches', 'input_cost_per_image_token_batches', 'input_cost_per_video_token_batches', 'input_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_above_272k_tokens_batches', 'output_cost_per_token_ultrafast', 'regional_endpoint_uplift_multiplier', 'output_cost_per_pixel', 'output_cost_per_second_480p', 'output_cost_per_second_720p', 'output_cost_per_second_768p', 'output_cost_per_second_2k', 'output_cost_per_second_4k', 'output_cost_per_image_512', 'output_cost_per_image_1024', 'output_cost_per_image_1536', 'ocr_cost_per_page_batches', 'annotation_cost_per_page_batches', 'google_maps_grounding_cost_per_query' on TypedDict class 'ModelInfo' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_abrupt_content_disconnect_is_not_retried
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'langfuse_environment', 'langfuse_span_scope', 'arize_success_sampling_rate', 'arize_error_sampling_rate' on TypedDict class 'StandardCallbackDynamicParams' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_cooldown_blocks_primary_on_next_request
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'probabilities', 'threshold', 'predicted_tier', 'request_type' on TypedDict class 'StandardLoggingHeuristicV2Forecast' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_native_router.py::NativeRouterContractTests::test_cooldown_blocks_primary_on_next_request
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:1480: UserWarning: Items 'classifier_probabilities', 'classifier_confidence', 'heuristic_v2_forecast', 'classifier_calibrated_p_solve', 'classifier_calibration_version', 'classifier_efficient_p_solve', 'classifier_capable_p_solve', 'classifier_calibrated_efficient_p_solve', 'classifier_calibrated_capable_p_solve', 'classifier_max_quality_gap', 'classifier_prompt_version' on TypedDict class 'StandardLoggingRoutingDecision' are using the `ReadOnly` qualifier. Pydantic will not protect items from any mutation on dictionary instances.
+    warnings.warn(
+
+tests/contract/test_sdk_bridge.py: 11 warnings
+tests/integration/test_proxy_postgres.py: 1 warning
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/integrations/custom_logger.py:568: RuntimeWarning: coroutine 'router_cooldown_event_callback' was never awaited
+    print_verbose(f"Custom Logger Error - {traceback.format_exc()}")
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/integration/test_proxy_postgres.py: 4 warnings
+tests/test_metadata.py: 12 warnings
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/model_response_utils.py:18: PydanticDeprecatedSince211: Accessing the 'model_computed_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    attribute: Final[_AttributeView] = {"value": getattr(source, name)}
+
+tests/integration/test_proxy_postgres.py: 4 warnings
+tests/test_metadata.py: 12 warnings
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/model_response_utils.py:18: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    attribute: Final[_AttributeView] = {"value": getattr(source, name)}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/integration/test_proxy_boundaries.py::test_native_total_deadline_bounds_two_slow_upstream_attempts
+FAILED tests/integration/test_proxy_boundaries.py::test_native_total_deadline_ends_active_sse_without_success_or_fallback
+FAILED tests/integration/test_proxy_postgres.py::NativeProxyPostgresTests::test_proxy_concurrency_limit_is_bounded
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_body_overrides_unknown_alias_and_unsupported_fields
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_database_unreachable_rejects_even_cached_valid_key
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_measured_usage_is_distinct_from_missing_and_stream_unknown
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_native_fallback_and_sanitized_trace
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_native_restricted_key_nonstream_and_models
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_nonstream_refusal_and_length_keep_semantics
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_observed_quota_persists_and_blocks_only_its_scope
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_persisted_pool_cooldown_restores_and_unknown_stays_unknown
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_proxy_concurrency_limit_is_bounded
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_proxy_disconnect_releases_slot_and_does_not_retry
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_after_text_failure_cannot_fallback
+SUBFAILED(refusal=False) tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_empty_and_terminal_refusal_are_valid
+SUBFAILED(refusal=True) tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_empty_and_terminal_refusal_are_valid
+SUBFAILED(behavior='ok') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_observed_stream_usage_and_unknown_are_distinct
+SUBFAILED(behavior='zero_usage') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_observed_stream_usage_and_unknown_are_distinct
+SUBFAILED(behavior='missing_usage') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_observed_stream_usage_and_unknown_are_distinct
+SUBFAILED(behavior='partial_usage') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_observed_stream_usage_and_unknown_are_distinct
+SUBFAILED(behavior='null_usage') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_observed_stream_usage_and_unknown_are_distinct
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+SUBFAILED(behavior='refusal') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_refusal_shapes_preserve_exact_semantics
+SUBFAILED(behavior='refusal_after_content') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_refusal_shapes_preserve_exact_semantics
+SUBFAILED(behavior='refusal_with_content') tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_refusal_shapes_preserve_exact_semantics
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_role_only_failure_cannot_fallback
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_stream_headers_update_only_the_confirmed_quota_scope
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_trailing_transport_failure_never_sends_terminal
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_stream_normal_and_clean_eof_never_faked_success
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_unaliased_keys_have_distinct_safe_audit_fingerprints
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_unknown_reset_zero_is_locally_paused_not_unrestricted
+FAILED tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_upstream_auth_failure_is_502_not_consumer_401
+32 failed, 706 passed, 53 warnings, 61 subtests passed in 369.96s (0:06:09)
+waiting for server to shut down.... done
+server stopped

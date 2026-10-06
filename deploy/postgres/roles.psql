@@ -1,0 +1,36 @@
+-- Session-local settings: password-bearing CREATE ROLE failures must never
+-- enter server statement logs. Do not change global diagnostic policy.
+SET log_statement = 'none';
+SET log_min_error_statement = 'panic';
+SET log_error_verbosity = 'terse';
+\getenv migration_password GATEWAY_MIGRATION_PASSWORD
+\getenv runtime_password GATEWAY_RUNTIME_PASSWORD
+\getenv backup_password GATEWAY_BACKUP_PASSWORD
+BEGIN;
+SET password_encryption = 'scram-sha-256';
+CREATE ROLE gateway_migrate LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS PASSWORD :'migration_password';
+CREATE ROLE gateway_runtime LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS PASSWORD :'runtime_password';
+CREATE ROLE gateway_backup LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOREPLICATION NOBYPASSRLS PASSWORD :'backup_password';
+REVOKE ALL ON DATABASE gateway FROM PUBLIC;
+GRANT CONNECT ON DATABASE gateway TO gateway_migrate, gateway_runtime, gateway_backup;
+GRANT CREATE ON DATABASE gateway TO gateway_migrate;
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+ALTER SCHEMA public OWNER TO gateway_migrate;
+CREATE SCHEMA gateway_ext AUTHORIZATION gateway_migrate;
+GRANT USAGE ON SCHEMA public, gateway_ext TO gateway_runtime, gateway_backup;
+ALTER ROLE gateway_backup SET default_transaction_read_only = on;
+ALTER ROLE gateway_migrate SET search_path = public;
+ALTER ROLE gateway_runtime SET search_path = public;
+ALTER ROLE gateway_backup SET search_path = public;
+-- Defaults apply only to objects created by the dedicated migration owner.
+ALTER DEFAULT PRIVILEGES FOR ROLE gateway_migrate IN SCHEMA public, gateway_ext
+  GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO gateway_runtime;
+ALTER DEFAULT PRIVILEGES FOR ROLE gateway_migrate IN SCHEMA public, gateway_ext
+  GRANT USAGE, SELECT ON SEQUENCES TO gateway_runtime;
+ALTER DEFAULT PRIVILEGES FOR ROLE gateway_migrate IN SCHEMA public, gateway_ext
+  GRANT SELECT ON TABLES TO gateway_backup;
+ALTER DEFAULT PRIVILEGES FOR ROLE gateway_migrate IN SCHEMA public, gateway_ext
+  GRANT SELECT ON SEQUENCES TO gateway_backup;
+ALTER DEFAULT PRIVILEGES FOR ROLE gateway_migrate
+  REVOKE EXECUTE ON FUNCTIONS FROM PUBLIC;
+COMMIT;

@@ -1,0 +1,156 @@
+name: personal-free-ai-gateway
+
+# Candidate deployment. No real provider is enabled. Verify on the target host.
+services:
+  postgres:
+    image: postgres:17.11-bookworm@sha256:3645570cccdfa447589da9f57dd740faa29b30938e861289a5574b6ca6b03826
+    restart: unless-stopped
+    entrypoint: [bash, /gateway-postgres-entrypoint.sh]
+    command: [postgres]
+    environment:
+      POSTGRES_DB: gateway
+      POSTGRES_USER: gateway_bootstrap
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_bootstrap_password
+      POSTGRES_INITDB_ARGS: --auth-host=scram-sha-256
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/entrypoint.sh:/gateway-postgres-entrypoint.sh:ro
+      - ./postgres/10-roles.sh:/docker-entrypoint-initdb.d/10-roles.sh:ro
+      - ./postgres/roles.psql:/docker-entrypoint-initdb.d/roles.psql:ro
+    tmpfs:
+      - /run/gateway-init-secrets:rw,noexec,nosuid,size=64k,mode=0700
+    secrets:
+      - postgres_bootstrap_password
+      - postgres_migration_password
+      - postgres_runtime_password
+      - postgres_backup_password
+    networks: [backend]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U gateway_bootstrap -d gateway']
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    security_opt: [no-new-privileges:true]
+    logging: &logging
+      driver: local
+      options:
+        max-size: 10m
+        max-file: '3'
+
+  # Explicit schema maintenance. Never receives runtime/admin/provider keys.
+  migrate:
+    image: personal-free-ai-gateway:1.0.0rc1-litellm1.104.0
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: runtime
+    entrypoint: [python, /app/deploy/postgres/migrate.py]
+    command: []
+    restart: 'no'
+    environment:
+      DATABASE_URL: ${MIGRATION_DATABASE_URL:?Set the independent gateway_migrate PostgreSQL URL}
+      LITELLM_TELEMETRY: 'False'
+      DO_NOT_TRACK: '1'
+    volumes:
+      - ./postgres:/app/deploy/postgres:ro
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,uid=10001,gid=10001
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [backend]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    logging: *logging
+
+  gateway:
+    image: personal-free-ai-gateway:1.0.0rc1-litellm1.104.0
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: runtime
+    init: true
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?Set the gateway_runtime PostgreSQL URL}
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:?Supply an existing private admin key}
+      LITELLM_SALT_KEY: ${LITELLM_SALT_KEY:?Supply an existing stable encryption salt}
+      GATEWAY_POLICY_PATH: /app/config/policy.yaml
+      GATEWAY_STATE_DIR: /var/lib/gateway
+      GATEWAY_PROFILE: production
+      LITELLM_TELEMETRY: 'False'
+      DO_NOT_TRACK: '1'
+    command: [python, -m, gateway.bootstrap, --config, /app/config/policy.yaml, --profile, production, --port, '4000']
+    volumes:
+      - type: bind
+        source: ${GATEWAY_CONFIG_DIR:-../config}
+        target: /app/config
+        read_only: true
+      - gateway_state:/var/lib/gateway
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,uid=10001,gid=10001
+      - /app/.runtime:rw,noexec,nosuid,size=16m,uid=10001,gid=10001
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [backend]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      # Liveness does not spend provider quota; readiness is checked separately.
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:4000/health/liveliness', timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 60s
+    stop_grace_period: 100s
+    logging: *logging
+
+  ingress:
+    image: nginx:1.30.5-alpine3.24@sha256:0985e772fb9f729e6fa0980da05fca5d9c468e870eed43071545afa9d2e27d94
+    user: '101:101'
+    entrypoint: [nginx, -g, 'daemon off;']
+    restart: unless-stopped
+    ports:
+      - '127.0.0.1:${CONSUMER_PORT:-4000}:8080'
+      - '127.0.0.1:${ADMIN_PORT:-4001}:8081'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/proxy.inc:/etc/nginx/proxy.inc:ro
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m,uid=101,gid=101
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [backend, edge]
+    depends_on:
+      gateway:
+        condition: service_healthy
+    logging: *logging
+
+networks:
+  # Gateway and database have no external route. Do not remove internal: true.
+  # Real-provider activation requires a reviewed, explicitly allowlisted egress path.
+  backend:
+    internal: true
+  edge: {}
+
+volumes:
+  postgres_data: {}
+  gateway_state: {}
+
+# Paths are deliberately blank in .env.example. Provision independent private
+# files through the authorized secret workflow; Compose never creates them.
+secrets:
+  postgres_bootstrap_password:
+    file: ${POSTGRES_BOOTSTRAP_PASSWORD_FILE:?Supply a bootstrap-only password file}
+  postgres_migration_password:
+    file: ${POSTGRES_MIGRATION_PASSWORD_FILE:?Supply an independent migration password file}
+  postgres_runtime_password:
+    file: ${POSTGRES_RUNTIME_PASSWORD_FILE:?Supply an independent runtime password file}
+  postgres_backup_password:
+    file: ${POSTGRES_BACKUP_PASSWORD_FILE:?Supply an independent backup password file}

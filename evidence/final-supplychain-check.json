@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "mode": "offline_read_only",
+  "passed": true,
+  "checks": [
+    {
+      "name": "python:3.12.15-slim-bookworm_used_immutable",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_no_unpinned_use",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_index_digest",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_mac_platforms",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_amd64_content",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_amd64_membership",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_arm64_content",
+      "passed": true
+    },
+    {
+      "name": "python:3.12.15-slim-bookworm_arm64_membership",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_used_immutable",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_no_unpinned_use",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_index_digest",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_mac_platforms",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_amd64_content",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_amd64_membership",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_arm64_content",
+      "passed": true
+    },
+    {
+      "name": "node:24.21.0-bookworm-slim_arm64_membership",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_used_immutable",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_no_unpinned_use",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_index_digest",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_mac_platforms",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_amd64_content",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_amd64_membership",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_arm64_content",
+      "passed": true
+    },
+    {
+      "name": "postgres:17.11-bookworm_arm64_membership",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_used_immutable",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_no_unpinned_use",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_index_digest",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_mac_platforms",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_amd64_content",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_amd64_membership",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_arm64_content",
+      "passed": true
+    },
+    {
+      "name": "nginx:1.30.5-alpine3.24_arm64_membership",
+      "passed": true
+    },
+    {
+      "name": "every_dependency_pinned",
+      "passed": true
+    },
+    {
+      "name": "every_dependency_has_sha256",
+      "passed": true
+    },
+    {
+      "name": "advisory_lock_fingerprint",
+      "passed": true
+    },
+    {
+      "name": "advisory_exact_set",
+      "passed": true
+    },
+    {
+      "name": "advisory_queries_complete",
+      "passed": true
+    },
+    {
+      "name": "known_python_advisories_clear",
+      "passed": true
+    },
+    {
+      "name": "source_litellm-advisories.json",
+      "passed": true
+    },
+    {
+      "name": "source_litellm-LICENSE.txt",
+      "passed": true
+    },
+    {
+      "name": "source_debian-squid-security.html",
+      "passed": true
+    },
+    {
+      "name": "squid_official_source_digest",
+      "passed": true
+    },
+    {
+      "name": "squid_build_checksum_pinned",
+      "passed": true
+    }
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Content hashes are not publisher signature verification.",
+    "Saved advisory review is a dated snapshot, not a current online scan.",
+    "No container build, OS/npm scan, Mac execution, or real-provider call is implied."
+  ]
+}

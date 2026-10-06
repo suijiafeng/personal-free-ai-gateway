@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-free-ai-gateway"
+version = "1.0.0rc1"
+description = "Fail-closed personal gateway policy for the native LiteLLM proxy"
+requires-python = ">=3.12,<3.14"
+dependencies = ["litellm[proxy]==1.104.0", "openai==2.54.0", "psycopg[binary]==3.3.6", "PyYAML==6.0.3", "prisma==0.15.0"]
+
+[tool.setuptools.packages.find]
+include = ["gateway*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = ["integration: native LiteLLM integration", "postgres: requires PostgreSQL", "live: real provider or consumer verification"]

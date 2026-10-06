@@ -1,0 +1,56 @@
+# Explicit opt-in only, after eligibility, license, and target-host gates pass.
+# Do not use this overlay for the offline mock deployment.
+services:
+  gateway:
+    # Only this short-lived secret bootstrap starts as root. It has no DAC override.
+    user: '0:0'
+    # Avoid leaving Docker's root tini parent behind after the app drops UID.
+    init: false
+    cap_drop: [ALL]
+    cap_add: [SETUID, SETGID]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: [CMD, python, /app/deploy/reviewed_start.py, --healthcheck]
+    environment:
+      HTTPS_PROXY: http://egress:3128
+      HTTP_PROXY: http://egress:3128
+      https_proxy: http://egress:3128
+      http_proxy: http://egress:3128
+      NO_PROXY: localhost,127.0.0.1,postgres
+      no_proxy: localhost,127.0.0.1,postgres
+      ALL_PROXY: ''
+      all_proxy: ''
+    command: [python, /app/deploy/reviewed_start.py]
+    volumes:
+      - ./egress/approved-hosts.txt:/etc/squid/approved-hosts.txt:ro
+    depends_on:
+      egress:
+        condition: service_healthy
+  egress:
+    image: personal-free-ai-gateway:complete-egress-litellm1.104.0
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.egress
+    init: true
+    restart: unless-stopped
+    command: [/opt/squid/sbin/squid, -N, -f, /etc/squid/squid.conf]
+    volumes:
+      - ./egress/squid.conf:/etc/squid/squid.conf:ro
+      - ./egress/approved-hosts.txt:/etc/squid/approved-hosts.txt:ro
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=32m,uid=10001,gid=10001
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [backend, egress_edge]
+    healthcheck:
+      test: [CMD, python, -c, "import socket; socket.create_connection(('127.0.0.1',3128),timeout=2).close()"]
+      interval: 5s
+      timeout: 3s
+      retries: 6
+    # No host port, provider key, database password, or host network.
+    logging:
+      driver: local
+      options: {max-size: 1m, max-file: '2'}
+networks:
+  egress_edge: {}

@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "default_squid_config_parse",
+      "passed": true
+    },
+    {
+      "name": "default_unapproved_hostname",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_ipv4_loopback",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_ipv6_loopback",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_metadata",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_wrong_port",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_plain_http",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_subdomain",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "default_ftp",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_squid_config_parse",
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_unapproved_hostname",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_ipv4_loopback",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_ipv6_loopback",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_metadata",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_wrong_port",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_plain_http",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_subdomain",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_ftp",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    },
+    {
+      "name": "reviewed_private_dns_approved_name_private_resolution",
+      "status": 403,
+      "expected": 403,
+      "passed": true
+    }
+  ],
+  "scope": "Real loopback TCP against upstream Squid7.7; original ACL. Only bind port and fixture paths changed.",
+  "binary_sha256": "e0218c91e37e97e71d00d6d1452bd36072a77b79a489b76fd1ba592f3b7a7572",
+  "acl_sha256": "3ac8103b0bf9b012f15ae7c8694ba63981c0bda971516105e5b17852d314d2e7",
+  "test_harness_sha256": "0375e4437b1f72059d4604852585b31dc01a5b20796d99f8bec7b2a4679fd6f3",
+  "squid_version": "Squid Cache: Version 7.7",
+  "provider_calls": 0,
+  "real_credentials_used": false,
+  "container_network_tested": false,
+  "positive_public_connect_tested": false
+}

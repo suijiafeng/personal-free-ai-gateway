@@ -1,0 +1,237 @@
+{
+  "checked_at": "2026-10-06",
+  "selected_version": "1.104.0",
+  "advisory_count": 17,
+  "range_normalization": "Historical -stable labels stripped for PEP440 comparison; original ranges retained.",
+  "advisories": [
+    {
+      "ghsa_id": "GHSA-7hp6-4w63-5g45",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7hp6-4w63-5g45",
+      "severity": "critical",
+      "published_at": "2026-09-30T01:13:51Z",
+      "affected_ranges": [
+        ">= 1.91.0, < 1.100.4",
+        ">= 1.101.0, < 1.101.3",
+        ">= 1.102.0, < 1.102.2",
+        ">= 1.103.0, <1.103.1",
+        ">= 1.104.0rc1, < 1.104.0rc2"
+      ],
+      "patched_versions": [
+        "1.100.4",
+        "1.101.3",
+        "1.102.2",
+        "1.103.1",
+        "1.104.0rc2"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-3cv6-jpf6-8222",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-3cv6-jpf6-8222",
+      "severity": "medium",
+      "published_at": "2026-08-26T20:00:03Z",
+      "affected_ranges": [
+        "<1.94.0"
+      ],
+      "patched_versions": [
+        "1.96.2, 1.95.1, 1.94.3, 1.93.2, 1.92.2, 1.91.5, 1.90.7, 1.89.7, 1.88.6"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-4g5m-c9r5-49xf",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-4g5m-c9r5-49xf",
+      "severity": "low",
+      "published_at": "2026-06-30T22:42:59Z",
+      "affected_ranges": [
+        "< 1.83.10-stable"
+      ],
+      "patched_versions": [
+        ">= 1.83.10-stable"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-5jmr-gcrj-2c9q",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-5jmr-gcrj-2c9q",
+      "severity": "medium",
+      "published_at": "2026-06-30T22:40:36Z",
+      "affected_ranges": [
+        "< 1.83.7-stable"
+      ],
+      "patched_versions": [
+        ">= 1.83.7-stable"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-hx8v-g79f-8w5f",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-hx8v-g79f-8w5f",
+      "severity": "medium",
+      "published_at": "2026-08-26T07:16:34Z",
+      "affected_ranges": [
+        "<=1.83.8"
+      ],
+      "patched_versions": [
+        "1.83.9"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-g5ff-637f-6q2m",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-g5ff-637f-6q2m",
+      "severity": "high",
+      "published_at": "2026-10-01T13:57:14Z",
+      "affected_ranges": [
+        "<1.95.0"
+      ],
+      "patched_versions": [
+        "1.95.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-4xpc-pv4p-pm3w",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-4xpc-pv4p-pm3w",
+      "severity": "critical",
+      "published_at": "2026-05-28T21:05:17Z",
+      "affected_ranges": [
+        "<1.84.0"
+      ],
+      "patched_versions": [
+        ">=1.84.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-hhww-mrg2-969h",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-hhww-mrg2-969h",
+      "severity": "medium",
+      "published_at": "2026-09-30T12:49:29Z",
+      "affected_ranges": [
+        ">= 1.65.5, < 1.85.0"
+      ],
+      "patched_versions": [
+        "1.85.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-72m8-9m7m-h278",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-72m8-9m7m-h278",
+      "severity": "low",
+      "published_at": "2026-06-30T23:08:45Z",
+      "affected_ranges": [
+        "< 1.82.0-stable"
+      ],
+      "patched_versions": [
+        ">= 1.82.0-stable"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-7488-6r32-c95q",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q",
+      "severity": "high",
+      "published_at": "2026-06-30T23:08:35Z",
+      "affected_ranges": [
+        "< 1.84.0"
+      ],
+      "patched_versions": [
+        ">= 1.84.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-v4p8-mg3p-g94g",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g",
+      "severity": "high",
+      "published_at": "2026-04-21T17:19:18Z",
+      "affected_ranges": [
+        ">=1.74.2, <1.83.7"
+      ],
+      "patched_versions": [
+        ">=1.83.7"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-wxxx-gvqv-xp7p",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-wxxx-gvqv-xp7p",
+      "severity": "medium",
+      "published_at": "2026-05-07T00:50:19Z",
+      "affected_ranges": [
+        ">= 1.81.8, < 1.83.10"
+      ],
+      "patched_versions": [
+        ">= 1.83.10"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-r75f-5x8p-qvmc",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc",
+      "severity": "critical",
+      "published_at": "2026-04-20T21:14:19Z",
+      "affected_ranges": [
+        ">=1.81.16, <1.83.7"
+      ],
+      "patched_versions": [
+        ">=1.83.7"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-xqmj-j6mv-4862",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-xqmj-j6mv-4862",
+      "severity": "high",
+      "published_at": "2026-04-20T19:50:41Z",
+      "affected_ranges": [
+        ">= 1.80.5, < 1.83.7"
+      ],
+      "patched_versions": [
+        ">= 1.83.7"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-69x8-hrgq-fjj8",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-69x8-hrgq-fjj8",
+      "severity": "high",
+      "published_at": "2026-04-04T01:00:18Z",
+      "affected_ranges": [
+        "<1.83.0"
+      ],
+      "patched_versions": [
+        "1.83.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-53mr-6c8q-9789",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-53mr-6c8q-9789",
+      "severity": "high",
+      "published_at": "2026-04-03T19:26:04Z",
+      "affected_ranges": [
+        "<1.83.0"
+      ],
+      "patched_versions": [
+        "1.83.0"
+      ],
+      "selected_version_affected": false
+    },
+    {
+      "ghsa_id": "GHSA-jjhc-v7c2-5hh6",
+      "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-jjhc-v7c2-5hh6",
+      "severity": "critical",
+      "published_at": "2026-04-03T19:24:57Z",
+      "affected_ranges": [
+        "<1.83.0"
+      ],
+      "patched_versions": [
+        "1.83.0"
+      ],
+      "selected_version_affected": false
+    }
+  ]
+}

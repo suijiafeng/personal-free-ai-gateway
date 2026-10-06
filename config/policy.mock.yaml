@@ -1,0 +1,85 @@
+# SYNTHETIC TEST FIXTURE ONLY. Never use as account evidence.
+schema_version: 1
+profile: mock
+alias: general-free
+privacy_scope: non_sensitive
+allowed_hosts:
+- 127.0.0.1
+- mock-upstream
+limits: {}
+pools:
+- id: mock-primary-requests
+  provider: mock
+  account_scope: synthetic-primary
+  model_scope:
+  - mock-primary
+  dimension: requests
+  window: minute
+  reset_timezone: UTC
+  shared_scope_evidence: 'SYNTHETIC TEST FIXTURE: independent mock state'
+- id: mock-secondary-requests
+  provider: mock
+  account_scope: synthetic-secondary
+  model_scope:
+  - mock-secondary
+  dimension: requests
+  window: minute
+  reset_timezone: UTC
+  shared_scope_evidence: 'SYNTHETIC TEST FIXTURE: independent mock state'
+deployments:
+- id: mock-primary
+  provider: openai
+  model: openai/mock-primary
+  api_base: http://mock-upstream:8081/v1
+  credential_env: MOCK_UPSTREAM_KEY
+  enabled: true
+  order: 1
+  eligibility:
+    status: confirmed_free
+    evidence: SYNTHETIC TEST ONLY; no real provider billing claim
+    checked_at: '2020-01-01T00:00:00Z'
+    review_by: '2100-01-01T00:00:00Z'
+    billing_hard_limit: true
+    privacy_scopes:
+    - non_sensitive
+  capability:
+    roles:
+    - system
+    - user
+    - assistant
+    streaming: true
+    max_output_tokens: 4096
+    max_input_chars: 32000
+    parameters:
+    - max_completion_tokens
+    - stream
+  quota_pools:
+  - mock-primary-requests
+- id: mock-secondary
+  provider: openai
+  model: openai/mock-secondary
+  api_base: http://mock-upstream:8081/v1
+  credential_env: MOCK_UPSTREAM_KEY
+  enabled: true
+  order: 2
+  eligibility:
+    status: confirmed_free
+    evidence: SYNTHETIC TEST ONLY; no real provider billing claim
+    checked_at: '2020-01-01T00:00:00Z'
+    review_by: '2100-01-01T00:00:00Z'
+    billing_hard_limit: true
+    privacy_scopes:
+    - non_sensitive
+  capability:
+    roles:
+    - system
+    - user
+    - assistant
+    streaming: true
+    max_output_tokens: 4096
+    max_input_chars: 32000
+    parameters:
+    - max_completion_tokens
+    - stream
+  quota_pools:
+  - mock-secondary-requests

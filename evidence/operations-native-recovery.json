@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "scope": "native processes + disposable PostgreSQL + local TCP mock",
+  "revisions": {
+    "a": "f14d369a8b895d4f79f2ead5985e0272e8ffc87988d6ac69927559466bcbb03f",
+    "b": "995c9a3e0d25af2d59a74e361001ebeb1480ad5c9ea4c560219ca85823fe6f6b"
+  },
+  "rotation_overlap_and_old_revocation": true,
+  "policy_release_rollback": {
+    "observed_order": [
+      "a",
+      "b",
+      "a"
+    ],
+    "routes_after_change": [
+      "mock-secondary",
+      "mock-primary"
+    ],
+    "drain_persisted_across_native_processes": true,
+    "wire_revisions_verified": true,
+    "docker_ops_cli_executed": false
+  },
+  "snapshot_active_keys": 2,
+  "actual_database_stop_restart": {
+    "cached_key_failed_closed": true,
+    "zero_upstream_during_outage": true,
+    "same_process_stays_closed_after_audit_loss": true,
+    "explicit_proxy_restart_restores_readiness": true
+  },
+  "restored_existing_key_deadline_recovery": {
+    "max_parallel_requests_before": 2,
+    "max_parallel_requests_after": 2,
+    "same_key_deadline_then_success_cycles": 3,
+    "adapter": "openai_sdk",
+    "no_key_replacement_or_counter_flush": true
+  },
+  "restored_active_key_authenticated": true,
+  "revoked_before_backup_stays_revoked": true,
+  "post_backup_revocation_resurrection_demonstrated": true,
+  "resurrected_key_reconciled_before_resume": true,
+  "reconciliation_survives_process_restart": true,
+  "exhaustion_and_reset_preserved": true,
+  "restored_inference_uses_only_eligible_alternate": true,
+  "automatic_revocation_journal_recovery": true,
+  "durable_unknown_revocation_intent_retained": true,
+  "unfinished_migration_guard_verified": true,
+  "failed_migration_ddl_rolled_back": true,
+  "all_fixture_keys_revoked": true,
+  "elapsed_seconds": 193.045,
+  "excludes": [
+    "Docker/Compose/Nginx",
+    "Mac",
+    "production credentials",
+    "cross-version migration",
+    "real suppliers"
+  ]
+}

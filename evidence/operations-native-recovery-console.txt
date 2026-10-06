@@ -1,0 +1,11 @@
+waiting for server to start.... done
+server started
+Native recovery: policy A/B/A and rotation verified; checking snapshot.
+waiting for server to shut down.... done
+server stopped
+waiting for server to start.... done
+server started
+Native recovery: actual DB outage and explicit process recovery verified; checking restored identities.
+{"status": "passed", "actual_failed_restore_rolled_back_all_partial_ddl": true, "automatic_revocation_journal_recovery": true, "unfinished_migration_guard_verified": true}
+waiting for server to shut down.... done
+server stopped

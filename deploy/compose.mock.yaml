@@ -1,0 +1,26 @@
+# Test-only overlay. Use a separate project to avoid production keys/state.
+services:
+  gateway:
+    environment:
+      GATEWAY_PROFILE: mock
+      MOCK_UPSTREAM_KEY: synthetic-test-only-not-a-secret
+      GATEWAY_POLICY_PATH: /app/config/policy.sdk.mock.yaml
+    command: [python, -m, gateway.bootstrap, --config, /app/config/policy.sdk.mock.yaml, --profile, mock, --port, '4000']
+    depends_on:
+      mock-upstream:
+        condition: service_started
+  mock-upstream:
+    image: personal-free-ai-gateway:1.0.0rc1-litellm1.104.0-test
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: test
+    command: [python, -m, uvicorn, 'tests.mock_upstream:create_mock_app', --factory, --host, '0.0.0.0', --port, '8081', --workers, '1', --no-access-log]
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m,uid=10001,gid=10001
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    networks: [backend]
+    # No host ports and no real provider credentials.

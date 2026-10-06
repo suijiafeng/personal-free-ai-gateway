@@ -1,0 +1,54 @@
+{
+  "project_version": "1.0.0rc1",
+  "bundled_deployment_fingerprints_match": true,
+  "bundled_deployment_fingerprints_count": 14,
+  "executable_shell_modes": {
+    "deploy/postgres/entrypoint.sh": "0o755",
+    "deploy/postgres/10-roles.sh": "0o755"
+  },
+  "broken_relative_document_links": [],
+  "junit": {
+    "complete-full-regression-results-main.xml": {
+      "testcase_nodes": 748,
+      "tests": 809,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "complete-full-regression-results-sdk-proxy.xml": {
+      "testcase_nodes": 41,
+      "tests": 51,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "complete-full-regression-results.xml": {
+      "testcase_nodes": 789,
+      "tests": 860,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "previous_releases": {
+    "personal-free-ai-gateway": {
+      "manifest_sha256": "d9488472f9f8f5e753a5db4cbcdb75c5985bd63f326ede1f31ecce48314297a0",
+      "mismatched_files": []
+    },
+    "personal-free-ai-gateway-v0.2": {
+      "manifest_sha256": "f565dc30c756cd12351b99d3aa7a8d66b1d14a084c7a7a35b793116e26b1c867",
+      "mismatched_files": []
+    }
+  },
+  "passed": true,
+  "compileall": "passed",
+  "policy_validation": {
+    "production": "passed; no enabled deployments",
+    "sdk_mock": "passed; two mock deployments"
+  },
+  "artifact_secret_scan": {
+    "evidence_api_key_patterns_found": 0,
+    "unexpected_environment_or_key_or_dump_files": 0,
+    "method": "Bounded filename checks and common API-key literal patterns; not a guarantee against every possible secret."
+  }
+}

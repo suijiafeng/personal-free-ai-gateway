@@ -1,0 +1,92 @@
+{
+  "version": "litellm==1.104.0",
+  "scope": "synthetic loopback, disposable PostgreSQL, one unchanged key",
+  "private_counter_access": "read-only diagnostics only; production code does not read or write counters",
+  "observations": [
+    {
+      "label": "warmup",
+      "status": 200,
+      "registry_sizes": [
+        0
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 1
+      }
+    },
+    {
+      "label": "deadline0",
+      "status": 504,
+      "registry_sizes": [
+        1
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 2
+      }
+    },
+    {
+      "label": "recovery0",
+      "status": 200,
+      "registry_sizes": [
+        1
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 3
+      }
+    },
+    {
+      "label": "deadline1",
+      "status": 504,
+      "registry_sizes": [
+        2
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 3
+      }
+    },
+    {
+      "label": "recovery1",
+      "status": 429,
+      "registry_sizes": [
+        2
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 3
+      }
+    },
+    {
+      "label": "deadline2",
+      "status": 429,
+      "registry_sizes": [
+        2
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 3
+      }
+    },
+    {
+      "label": "recovery2",
+      "status": 429,
+      "registry_sizes": [
+        2
+      ],
+      "active_gateway": 0,
+      "active_upstream": 0,
+      "counts": {
+        "mock-primary": 3
+      }
+    }
+  ],
+  "native_slot_ttl_seconds": 3600
+}

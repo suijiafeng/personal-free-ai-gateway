@@ -1,0 +1,8 @@
+{
+  "id": "chatcmpl-mock",
+  "object": "chat.completion",
+  "created": 1700000000,
+  "model": "mock-primary",
+  "choices": [{"index": 0, "message": {"role": "assistant", "content": "Hello from the mock upstream."}, "finish_reason": "stop"}],
+  "usage": {"prompt_tokens": 8, "completion_tokens": 6, "total_tokens": 14}
+}

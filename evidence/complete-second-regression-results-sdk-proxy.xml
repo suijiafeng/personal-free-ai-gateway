@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="45" time="56.796" timestamp="2026-10-06T19:42:47.574385+09:00" hostname="b67b4cbec227"><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_all_cooling_is_explicit_503_with_zero_new_attempts" time="30.277" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_body_overrides_unknown_alias_and_unsupported_fields" time="0.187" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_database_override_is_detected_before_upstream" time="0.050" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_database_unreachable_rejects_even_cached_valid_key" time="1.500" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_drain_stops_new_requests_and_reports_revision" time="0.127" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_invalid_key_master_and_admin_isolation" time="0.306" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_measured_usage_is_distinct_from_missing_and_stream_unknown" time="4.022"><failure message="AssertionError: 504 != 200 : {&quot;error&quot;: {&quot;message&quot;: &quot;The total request deadline was reached.&quot;, &quot;type&quot;: &quot;deadline_exceeded&quot;, &quot;param&quot;: null, &quot;code&quot;: &quot;deadline_exceeded&quot;}}">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_measured_usage_is_distinct_from_missing_and_stream_unknown&gt;
+
+    def test_measured_usage_is_distinct_from_missing_and_stream_unknown(self):
+&gt;       r=self.invoke();self.assertEqual(r.status_code,200,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 504 != 200 : {"error": {"message": "The total request deadline was reached.", "type": "deadline_exceeded", "param": null, "code": "deadline_exceeded"}}
+
+tests/integration/test_proxy_postgres.py:376: AssertionError</failure></testcase><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_native_fallback_and_sanitized_trace" time="1.037" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_native_restricted_key_nonstream_and_models" time="0.466" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_native_revoke_rejects_old_key" time="0.230" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_nonstream_refusal_and_length_keep_semantics" time="0.923" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_observed_quota_persists_and_blocks_only_its_scope" time="0.833" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_persisted_pool_cooldown_restores_and_unknown_stays_unknown" time="0.323" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_postgres_client_encoding_is_forced_utf8" time="0.010" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_private_diagnostics_deny_consumers_and_never_probe" time="0.024" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_proxy_concurrency_limit_is_bounded" time="0.484"><failure message="AssertionError: 0 != 2">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_proxy_concurrency_limit_is_bounded&gt;
+
+    def test_proxy_concurrency_limit_is_bounded(self):
+        self.assertEqual(self.invoke().status_code,200)  # establish healthy quota pool
+        # The response body can arrive before audit finalization releases its slot.
+        for _ in range(300):
+            if self.app.active_requests==0 and self.upstream.active_requests==0:
+                break
+            time.sleep(.01)
+        self.assertEqual(self.app.active_requests,0)
+        self.upstream.reset()
+        release=threading.Event()
+        self.upstream.set_behavior('mock-primary','ok',release_event=release)
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            work=[executor.submit(self.invoke) for _ in range(2)]
+            try:
+                # Synchronize on actual admission rather than an arbitrary 0.5s
+                # machine-speed assumption. A completed/failed request still
+                # fails every original occupancy/outcome assertion below.
+                admission_deadline=time.monotonic()+self.app.policy.limits.total_timeout
+                while time.monotonic()&lt;admission_deadline:
+                    if self.upstream.active_requests==2:
+                        break
+                    if any(f.done() for f in work):
+                        break
+                    time.sleep(.005)
+                # Both actual upstream requests are held until after the third check.
+&gt;               self.assertEqual(self.upstream.active_requests,2)
+E               AssertionError: 0 != 2
+
+tests/integration/test_proxy_postgres.py:198: AssertionError</failure></testcase><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_proxy_disconnect_releases_slot_and_does_not_retry" time="0.575" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_restricted_secondary_grant_cannot_expand" time="0.506" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_retention_deletes_only_expired_metadata" time="0.050" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_runtime_disabled_eligibility_cannot_be_called" time="0.073" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_after_text_failure_cannot_fallback" time="0.442" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_empty_and_terminal_refusal_are_valid" time="0.700" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_observed_stream_usage_and_unknown_are_distinct" time="2.178" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_pre_first_event_failure_has_one_bounded_fallback" time="0.494" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_refusal_shapes_preserve_exact_semantics" time="1.257" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_role_only_failure_cannot_fallback" time="0.411" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_stream_headers_update_only_the_confirmed_quota_scope" time="0.803" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_total_deadline_stops_stream_and_releases_resources" time="0.274" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_sdk_trailing_transport_failure_never_sends_terminal" time="4.458"><failure message="AssertionError: Missing completed request trace">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_sdk_trailing_transport_failure_never_sends_terminal&gt;
+
+    def test_sdk_trailing_transport_failure_never_sends_terminal(self):
+        original=deepcopy(mock_upstream.STREAM_EVENTS)
+        # Fixture disconnects after event index 2. Put the true upstream terminal
+        # there: the bridge must withhold it until SDK consumption finishes safely.
+        events=[original[0],original[2],original[-2],original[-1]]
+        self.upstream.set_behavior('mock-primary','disconnect_after_content')
+        with patch.object(mock_upstream,'STREAM_EVENTS',events):
+            response=self.invoke(stream=True)
+        self.assertNotIn('data: [DONE]',response.text)
+        self.assertNotIn('"finish_reason":"stop"',response.text.replace(' ',''))
+        self.assertEqual(self.upstream.counts['mock-secondary'],0)
+&gt;       self.assertEqual(self._finished(response.headers['x-request-id'])[-1]['status'],'stream_interrupted')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/integration/test_sdk_proxy_postgres.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/integration/test_sdk_proxy_postgres.py:24: in _finished
+    self.fail('Missing completed request trace')
+E   AssertionError: Missing completed request trace</failure></testcase><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_secret_bearing_errors_do_not_escape_wire_logs_or_database" time="0.217" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_stream_normal_and_clean_eof_never_faked_success" time="0.174"><failure message="AssertionError: 429 != 200 : {&quot;error&quot;: {&quot;message&quot;: &quot;The request is temporarily rate limited.&quot;, &quot;type&quot;: &quot;rate_limited&quot;, &quot;param&quot;: null, &quot;code&quot;: &quot;rate_limited&quot;}}">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_stream_normal_and_clean_eof_never_faked_success&gt;
+
+    def test_stream_normal_and_clean_eof_never_faked_success(self):
+&gt;       r=self.invoke(stream=True);self.assertEqual(r.status_code,200,r.text)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 429 != 200 : {"error": {"message": "The request is temporarily rate limited.", "type": "rate_limited", "param": null, "code": "rate_limited"}}
+
+tests/integration/test_proxy_postgres.py:148: AssertionError</failure></testcase><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_unaliased_keys_have_distinct_safe_audit_fingerprints" time="1.307" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_unknown_reset_zero_is_locally_paused_not_unrestricted" time="0.124"><failure message="AssertionError: 429 != 200">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_unknown_reset_zero_is_locally_paused_not_unrestricted&gt;
+
+    def test_unknown_reset_zero_is_locally_paused_not_unrestricted(self):
+        self.upstream.set_behavior('mock-primary','ok',headers={'x-ratelimit-remaining-requests':'0'})
+&gt;       self.assertEqual(self.invoke().status_code,200)
+E       AssertionError: 429 != 200
+
+tests/integration/test_proxy_postgres.py:432: AssertionError</failure></testcase><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_unsupported_fallback_capability_rejects_before_primary" time="0.100" /><testcase classname="tests.integration.test_sdk_proxy_postgres.NativeSDKProxyPostgresTests" name="test_upstream_auth_failure_is_502_not_consumer_401" time="0.487"><failure message="AssertionError: 429 != 502 : {&quot;error&quot;: {&quot;message&quot;: &quot;The request is temporarily rate limited.&quot;, &quot;type&quot;: &quot;rate_limited&quot;, &quot;param&quot;: null, &quot;code&quot;: &quot;rate_limited&quot;}}">self = &lt;test_sdk_proxy_postgres.NativeSDKProxyPostgresTests testMethod=test_upstream_auth_failure_is_502_not_consumer_401&gt;
+
+    def test_upstream_auth_failure_is_502_not_consumer_401(self):
+        self.upstream.set_behavior('mock-primary','http_401')
+&gt;       r=self.invoke();self.assertEqual(r.status_code,502,r.text)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 429 != 502 : {"error": {"message": "The request is temporarily rate limited.", "type": "rate_limited", "param": null, "code": "rate_limited"}}
+
+tests/integration/test_proxy_postgres.py:236: AssertionError</failure></testcase></testsuite></testsuites>

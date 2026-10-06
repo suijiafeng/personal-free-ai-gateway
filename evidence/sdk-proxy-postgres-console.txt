@@ -1,0 +1,39 @@
+.........................................                      [100%]
+=============================== warnings summary ===============================
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_after_text_failure_cannot_fallback
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_role_only_failure_cannot_fallback
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_same_key_recovers_after_repeated_disconnects_and_errors
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_same_key_recovers_after_repeated_stream_deadlines
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_trailing_transport_failure_never_sends_terminal
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_stream_normal_and_clean_eof_never_faked_success
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/integrations/custom_logger.py:568: RuntimeWarning: coroutine 'router_cooldown_event_callback' was never awaited
+    print_verbose(f"Custom Logger Error - {traceback.format_exc()}")
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2654: PydanticDeprecatedSince211: Accessing the 'model_computed_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    return getattr(obj, name)
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2722: PydanticDeprecatedSince211: Accessing the 'model_computed_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    current_val = getattr(combined, attr, 0)
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2723: PydanticDeprecatedSince211: Accessing the 'model_computed_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    new_val = getattr(usage, attr, 0)
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2654: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    return getattr(obj, name)
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2722: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    current_val = getattr(combined, attr, 0)
+
+tests/integration/test_sdk_proxy_postgres.py::NativeSDKProxyPostgresTests::test_sdk_pre_first_event_failure_has_one_bounded_fallback
+  /workspace/shared/personal-free-ai-gateway/.venv/lib/python3.12/site-packages/litellm/cost_calculator.py:2723: PydanticDeprecatedSince211: Accessing the 'model_fields' attribute on the instance is deprecated. Instead, you should access this attribute from the model class. Deprecated in Pydantic V2.11 to be removed in V3.0.
+    new_val = getattr(usage, attr, 0)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+41 passed, 12 warnings, 10 subtests passed in 54.13s
