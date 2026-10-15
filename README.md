@@ -62,3 +62,6 @@ export GATEWAY_BASE_URL=http://127.0.0.1:4100/v1
 - [架构说明](docs/architecture.md)
 - [运维与备份恢复](docs/operations-complete.md)
 - [诊断与脱敏导出](docs/diagnostics-complete.md)
+
+---
+> **声明**：本仓库为个人项目，仅供学习交流。
